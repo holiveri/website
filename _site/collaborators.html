@@ -164,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 const width = 1150;
 const height = 780;
 
-const mainAuthor = "Hadrien Oliveri";
+const mainAuthor = "H. Oliveri";
 
 const topicInfo = {
   plants: {
@@ -192,7 +192,7 @@ const topicInfo = {
     color: "#999999"
   },
   me: {
-    label: "Hadrien Oliveri",
+    label: "H. Oliveri",
     color: "#111111"
   }
 };
@@ -274,7 +274,7 @@ nodes.forEach(node => {
   node.group = topics.length ? topics[0][0] : "mixed";
 
   // Logarithmic scaling to emphasize frequent collaborators
-  node.size = 0 + 15 * Math.log1p(node.papers,2);
+  node.size = 25 * Math.log1p(.5 * node.papers);
 });
 
 // --------------------------------------------------

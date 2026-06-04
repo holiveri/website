@@ -1,0 +1,23 @@
+{
+  "homepage-draft.md": {
+    "homepage-draft.html": "adfc6d24"
+  },
+  "research.qmd": {
+    "research.html": "0706376b"
+  },
+  "publications.qmd": {
+    "publications.html": "afb0bfbf"
+  },
+  "cv.qmd": {
+    "cv.html": "0f0497a3"
+  },
+  "index.qmd": {
+    "index.html": "b33dfb23"
+  },
+  "collaborators.qmd": {
+    "collaborators.html": "84452202"
+  },
+  "publications2.qmd": {
+    "publications2.html": "6c463477"
+  }
+}

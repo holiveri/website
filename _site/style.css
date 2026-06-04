@@ -1,0 +1,210 @@
+/* Lux-compatible academic style */
+
+body {
+  font-size: 16.5px;
+  line-height: 1.7;
+  background: #ffffff;
+  color: #222222;
+}
+
+/* Main content width */
+
+main {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+
+.navbar {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.navbar-title {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Headings */
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-top: 2.6rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #eeeeee;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1.8rem;
+}
+
+/* Intro block */
+
+.intro {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Profile picture */
+
+.profile-pic {
+  width: 95px;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 50%;
+  float: right;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  filter: grayscale(10%);
+}
+
+/* Paragraphs */
+
+p {
+  max-width: 760px;
+}
+
+/* Links */
+
+a {
+  color: #111111;
+  text-decoration: none;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+a:hover {
+  color: #000000;
+  border-bottom: 1px solid #000000;
+}
+
+/* Do not underline navbar links */
+
+.navbar a {
+  border-bottom: none;
+}
+
+/* Lists */
+
+li {
+  margin-bottom: 0.35rem;
+}
+
+/* Publications */
+
+.pub-title,
+strong {
+  font-weight: 600;
+}
+
+.pub-authors {
+  color: #444444;
+}
+
+.pub-venue,
+em {
+  color: #555555;
+}
+
+/* Code-style DOI links */
+
+code {
+  font-size: 0.9em;
+  color: #333333;
+  background-color: #f4f4f4;
+  padding: 0.12rem 0.25rem;
+  border-radius: 4px;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  main {
+    max-width: 92%;
+  }
+
+  .profile-pic {
+    float: none;
+    display: block;
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+a {
+  color: #374151;
+  text-decoration: none;
+  border-bottom: 1px solid #d1d5db;
+}
+
+a:hover {
+  color: #111827;
+  border-bottom: 1px solid #111827;
+}
+#collab-network {
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  border: none;
+}
+
+#collab-network svg {
+  width: 100%;
+  max-width: 1150px;
+  min-height: 760px;
+  background: transparent;
+  border: none;
+}
+
+.network-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 999px;
+}
+
+.publication-list {
+  padding-left: 1.2rem;
+}
+
+.publication-item {
+  margin-bottom: 1.35rem;
+}
+
+.publication-authors {
+  color: #444444;
+}
+
+.publication-note {
+  color: #666666;
+  font-size: 0.95em;
+}
+
+.publication-item code {
+  font-size: 0.9em;
+}

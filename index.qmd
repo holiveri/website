@@ -1,0 +1,61 @@
+---
+title: "Hadrien Oliveri"
+---
+
+::: {.intro}
+
+## About me
+
+<img src="images/profile.jpeg"
+     alt="Hadrien Oliveri"
+     style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; float: left; margin-right: 1.5rem; margin-bottom: 1rem;">
+
+I am an applied mathematician working at the interface of nonlinear mechanics, elasticity, growth, and biological morphogenesis.
+
+My research develops mathematical models for how biological and soft material systems grow, deform, and control their shape.
+
+:::
+
+## Research interests
+
+- Growth and morphogenesis
+- Plant mechanics and tissue tension
+- Nonlinear elasticity and instabilities
+- Biological transport and network models
+
+## Selected publications
+
+**[Towards a hydromechanical theory of plant active matter](https://hal.science/hal-05623240v1)**   
+H. Oliveri, C. Godin, and I. Cheddadi  
+*Quantitative Plant Biology*, accepted, 2026
+
+**[Hydromechanical field theory of plant morphogenesis](https://www.sciencedirect.com/science/article/pii/S0022509625000110)**  
+H. Oliveri and I. Cheddadi  
+*Journal of the Mechanics and Physics of Solids*, 2025
+
+**[Active shape control by plants in dynamic environments](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.110.014405)**  
+H. Oliveri, D. E. Moulton, H. A. Harrington, and A. Goriely  
+*Physical Review E*, 2024
+
+**[Theory for durotactic axon guidance](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.118101)**  
+H. Oliveri, K. Franze, and A. Goriely  
+*Physical Review Letters*, 2021
+
+**[Multiscale integration of environmental stimuli in plant tropism produces complex behaviors](https://www.pnas.org/doi/10.1073/pnas.2016025117)**  
+D. E. Moulton, H. Oliveri, and A. Goriely,  
+*Proceedings of the National Academy of Sciences*, 2020
+
+[See all publications](publications.html)
+
+## Contact
+
+Email: `holiveri [at] mpipz dot mpg dot de`
+
+## Links
+
+[MPIPZ](https://www.mpipz.mpg.de/5630577/oliveri) ·
+[Bluesky Social](https://bsky.app/profile/hadrienoliveri.bsky.social) ·
+[Researchgate](https://www.researchgate.net/profile/Hadrien-Oliveri) · 
+[ORCID](https://orcid.org/0000-0002-5488-5567) ·
+[Linkedin](https://www.linkedin.com/in/hadrien-oliveri-829514aa/) ·
+[Google Scholar](https://scholar.google.com/citations?user=t-GO214AAAAJ&hl=en)

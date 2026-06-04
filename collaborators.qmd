@@ -1,0 +1,311 @@
+---
+title: "Collaborators"
+---
+
+A map of selected collaborators and coauthorship connections. Nodes are colored by the main research area of the corresponding collaborations.
+
+<div id="legend"></div>
+<div id="collab-network"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="papers.js"></script>
+
+<script>
+const width = 1150;
+const height = 780;
+
+const mainAuthor = "Hadrien Oliveri";
+
+const topicInfo = {
+  plants: {
+    label: "Plant mechanics and morphogenesis",
+    color: "#4b8f5a"
+  },
+  neuro: {
+    label: "Neuronal growth and durotaxis",
+    color: "#7c6bb0"
+  },
+  transport: {
+    label: "Biological transport and networks",
+    color: "#4c78a8"
+  },
+  mechanics: {
+    label: "Nonlinear mechanics",
+    color: "#444444"
+  },
+  biomechanics: {
+    label: "Biomechanics and surgery",
+    color: "#b07d3c"
+  },
+  mixed: {
+    label: "Mixed collaborations",
+    color: "#999999"
+  },
+  me: {
+    label: "Hadrien Oliveri",
+    color: "#111111"
+  }
+};
+
+// --------------------------------------------------
+// Build nodes and coauthor links from papers.js
+// --------------------------------------------------
+
+const nodeMap = new Map();
+const edgeMap = new Map();
+
+function ensureNode(author) {
+  if (!nodeMap.has(author)) {
+    nodeMap.set(author, {
+      id: author,
+      papers: 0,
+      topics: {},
+      size: 10,
+      group: "mixed"
+    });
+  }
+
+  return nodeMap.get(author);
+}
+
+function edgeKey(a, b) {
+  return [a, b].sort().join("|||");
+}
+
+papers.forEach(paper => {
+  paper.authors.forEach(author => {
+    const node = ensureNode(author);
+
+    node.papers += 1;
+
+    if (paper.topic) {
+      node.topics[paper.topic] = (node.topics[paper.topic] || 0) + 1;
+    }
+  });
+
+  // Connect every pair of coauthors on the same paper
+  for (let i = 0; i < paper.authors.length; i++) {
+    for (let j = i + 1; j < paper.authors.length; j++) {
+      const a = paper.authors[i];
+      const b = paper.authors[j];
+      const key = edgeKey(a, b);
+
+      if (!edgeMap.has(key)) {
+        edgeMap.set(key, {
+          source: a,
+          target: b,
+          value: 0,
+          papers: []
+        });
+      }
+
+      const edge = edgeMap.get(key);
+      edge.value += 1;
+      edge.papers.push(paper.title);
+    }
+  }
+});
+
+const nodes = Array.from(nodeMap.values());
+const links = Array.from(edgeMap.values());
+
+// --------------------------------------------------
+// Assign dominant topic and logarithmic bubble size
+// --------------------------------------------------
+
+nodes.forEach(node => {
+  if (node.id === mainAuthor) {
+    node.group = "me";
+    node.size = 28;
+    return;
+  }
+
+  const topics = Object.entries(node.topics).sort((a, b) => b[1] - a[1]);
+  node.group = topics.length ? topics[0][0] : "mixed";
+
+  // Logarithmic scaling to emphasize frequent collaborators
+  node.size = 0 + 15 * Math.log1p(node.papers,2);
+});
+
+// --------------------------------------------------
+// Legend
+// --------------------------------------------------
+
+const legendItems = Object.entries(topicInfo)
+  .filter(([key]) => key !== "mixed");
+
+const legend = d3.select("#legend")
+  .append("div")
+  .attr("class", "network-legend");
+
+legendItems.forEach(([key, info]) => {
+  const item = legend.append("div")
+    .attr("class", "legend-item");
+
+  item.append("span")
+    .attr("class", "legend-dot")
+    .style("background", info.color);
+
+  item.append("span")
+    .text(info.label);
+});
+
+// --------------------------------------------------
+// SVG
+// --------------------------------------------------
+
+const svg = d3.select("#collab-network")
+  .append("svg")
+  .attr("viewBox", `0 0 ${width} ${height}`)
+  .attr("width", "100%")
+  .attr("height", "auto");
+
+// Explicit layer order
+const linkLayer = svg.append("g").attr("class", "links");
+const nodeLayer = svg.append("g").attr("class", "nodes");
+const labelLayer = svg.append("g").attr("class", "labels");
+
+// --------------------------------------------------
+// Draw straight edges first, behind bubbles
+// --------------------------------------------------
+
+const link = linkLayer
+  .selectAll("line")
+  .data(links)
+  .join("line")
+  .attr("stroke", "#b7b7b7")
+  .attr("stroke-opacity", 0.38)
+  .attr("stroke-width", d => 0.6 + Math.sqrt(d.value));
+
+link.append("title")
+  .text(d => {
+    const source = typeof d.source === "object" ? d.source.id : d.source;
+    const target = typeof d.target === "object" ? d.target.id : d.target;
+
+    return `${source} ↔ ${target}\n${d.value} shared paper(s)\n\n${d.papers.join("\n")}`;
+  });
+
+// --------------------------------------------------
+// Draw bubbles second, in front of edges
+// --------------------------------------------------
+
+const node = nodeLayer
+  .selectAll("circle")
+  .data(nodes)
+  .join("circle")
+  .attr("r", d => d.size)
+  .attr("fill", d => topicInfo[d.group]?.color || topicInfo.mixed.color)
+  .attr("stroke", "#111111")
+  .attr("stroke-width", d => d.id === mainAuthor ? 1.8 : 0.8)
+  .attr("opacity", d => d.id === mainAuthor ? 1 : 1)
+  .call(drag());
+
+node.append("title")
+  .text(d => {
+    const topicText = Object.entries(d.topics)
+      .map(([topic, count]) => `${topicInfo[topic]?.label || topic}: ${count}`)
+      .join("\n");
+
+    return `${d.id}\n${d.papers} paper(s)\n${topicText}`;
+  });
+
+// --------------------------------------------------
+// Draw labels last
+// --------------------------------------------------
+
+const label = labelLayer
+  .selectAll("text")
+  .data(nodes)
+  .join("text")
+  .text(d => d.id)
+  .attr("font-size", d => d.id === mainAuthor ? 15 : 11.5)
+  .attr("font-family", "Arial, sans-serif")
+  .attr("font-weight", d => d.id === mainAuthor ? 700 : 400)
+  .attr("fill", "#111111")
+  .attr("text-anchor", "middle")
+  .attr("dy", d => d.size + 15)
+  .style("pointer-events", "none");
+
+// Force layer order explicitly
+linkLayer.lower();
+nodeLayer.raise();
+labelLayer.raise();
+
+// --------------------------------------------------
+// Force simulation
+// --------------------------------------------------
+
+const simulation = d3.forceSimulation(nodes)
+  .force("link", d3.forceLink(links)
+    .id(d => d.id)
+    .distance(d => 95 + 8 * d.value)
+    .strength(0.18)
+  )
+  .force("charge", d3.forceManyBody().strength(-780))
+  .force("center", d3.forceCenter(width / 2, height / 2))
+  .force("collision", d3.forceCollide().radius(d => d.size + 45))
+  .force("x", d3.forceX(d => {
+    if (d.group === "plants") return width * 0.28;
+    if (d.group === "neuro") return width * 0.72;
+    if (d.group === "transport") return width * 0.68;
+    if (d.group === "biomechanics") return width * 0.25;
+    if (d.group === "mechanics") return width * 0.50;
+    return width * 0.50;
+  }).strength(0.035))
+  .force("y", d3.forceY(d => {
+    if (d.group === "plants") return height * 0.32;
+    if (d.group === "neuro") return height * 0.34;
+    if (d.group === "transport") return height * 0.68;
+    if (d.group === "biomechanics") return height * 0.72;
+    if (d.group === "mechanics") return height * 0.48;
+    return height * 0.50;
+  }).strength(0.035));
+
+// --------------------------------------------------
+// Tick update: straight edges
+// --------------------------------------------------
+
+simulation.on("tick", () => {
+  link
+    .attr("x1", d => d.source.x)
+    .attr("y1", d => d.source.y)
+    .attr("x2", d => d.target.x)
+    .attr("y2", d => d.target.y);
+
+  node
+    .attr("cx", d => d.x)
+    .attr("cy", d => d.y);
+
+  label
+    .attr("x", d => d.x)
+    .attr("y", d => d.y);
+});
+
+// --------------------------------------------------
+// Drag behavior
+// --------------------------------------------------
+
+function drag() {
+  function dragstarted(event, d) {
+    if (!event.active) simulation.alphaTarget(0.15).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+
+  function dragged(event, d) {
+    d.fx = event.x;
+    d.fy = event.y;
+  }
+
+  function dragended(event, d) {
+    if (!event.active) simulation.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+  }
+
+  return d3.drag()
+    .on("start", dragstarted)
+    .on("drag", dragged)
+    .on("end", dragended);
+}
+</script>

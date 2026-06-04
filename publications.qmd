@@ -1,0 +1,71 @@
+---
+title: "Publications"
+---
+
+A full and up-to-date list is available on my
+[Google Scholar profile](https://scholar.google.com/citations?user=t-GO214AAAAJ&hl=fr).
+
+<div id="pub-preprints"></div>
+<div id="pub-articles"></div>
+<div id="pub-proceedings"></div>
+
+<script src="papers.js"></script>
+
+<script>
+function paperLink(paper) {
+  if (paper.doi) {
+    return `DOI: <a href="https://doi.org/${paper.doi}"><code>${paper.doi}</code></a>`;
+  }
+
+  if (paper.arxiv) {
+    return `arXiv: <a href="https://arxiv.org/abs/${paper.arxiv}"><code>${paper.arxiv}</code></a>`;
+  }
+
+  return "";
+}
+
+function renderPublications(containerId, title, type) {
+  const container = document.getElementById(containerId);
+
+  const selected = papers
+    .filter(paper => paper.type === type)
+    .sort((a, b) => b.year - a.year);
+
+  if (selected.length === 0) return;
+
+  const section = document.createElement("section");
+  section.className = "publication-section";
+
+  const heading = document.createElement("h2");
+  heading.textContent = title;
+  section.appendChild(heading);
+
+  const list = document.createElement("ul");
+  list.className = "publication-list";
+
+  selected.forEach(paper => {
+    const item = document.createElement("li");
+    item.className = "publication-item";
+
+    const link = paperLink(paper);
+    const authors = paper.citationAuthors || paper.authors.join(", ");
+
+    item.innerHTML = `
+      <span class="publication-authors">${authors}</span>,<br>
+      <strong>${paper.title}</strong>,<br>
+      <em>${paper.venue}</em>, ${paper.year}.
+      ${link ? `<br>${link}` : ""}
+      ${paper.note ? `<br><span class="publication-note">${paper.note}</span>` : ""}
+    `;
+
+    list.appendChild(item);
+  });
+
+  section.appendChild(list);
+  container.appendChild(section);
+}
+
+renderPublications("pub-preprints", "Preprints", "preprint");
+renderPublications("pub-articles", "Journal articles", "article");
+renderPublications("pub-proceedings", "Conference proceedings", "proceeding");
+</script>

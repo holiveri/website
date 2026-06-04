@@ -1,0 +1,29 @@
+---
+title: "Curriculum Vitæ"
+---
+
+## Employment history
+
+- **2024→present**  
+*Group Leader*  
+[Max Planck Institute for Plant Breeding Research](https://www.mpipz.mpg.de/en), Cologne, Germany
+
+- **2024→2024**  
+*ELBE Postdoctoral Fellow*  
+[Max Planck Institute of Molecular Cell Biology and Genetics](https://www.mpi-cbg.de), Dresden, Germany
+
+- **2023→2024**    
+*Postdoctoral Researcher*  
+[Max Planck Institute of Molecular Cell Biology and Genetics](https://www.mpi-cbg.de), Dresden, Germany
+
+- **2019→2023**  
+*Postdoctoral Researcher*  
+[Mathematical Institute](https://www.maths.ox.ac.uk), [University of Oxford](https://www.ox.ac.uk), Oxford, United Kingdom
+
+- **2015→2019**  
+*PhD student*  
+[Inria](https://www.inria.fr/en), [University of Montpellier](https://www.umontpellier.fr/en/), [ENS de Lyon](https://www.ens-lyon.fr/en/), Montpellier and Lyon, France
+
+## Download
+
+You can download my full CV [here](files/CV.pdf){.button}

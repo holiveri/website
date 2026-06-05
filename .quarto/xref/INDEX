@@ -22,5 +22,11 @@
   },
   "contact.qmd": {
     "contact.html": "be0de454"
+  },
+  "people.qmd": {
+    "people.html": "fc3ca5d8"
+  },
+  "outreach.qmd": {
+    "outreach.html": "00cc86f4"
   }
 }

@@ -1,0 +1,22 @@
+---
+title: "Outreach"
+---
+
+## Plants with teeth
+
+A summary of [our work](https://www.pnas.org/doi/10.1073/pnas.2306268120) on carnivorous pitcher plants (*Nepenthes*), with [Chris Thorogood](https://www.biology.ox.ac.uk/people/chris-thorogood), [Derek Moulton](https://people.maths.ox.ac.uk/moulton/) and [Alain Goriely](http://goriely.com). For details, see [here](https://www.maths.ox.ac.uk/node/64967).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gBIJwVOsPok?si=mOkmwmSaU-WPiXIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## The mathematics and mechanics of plant morphogenesis
+
+This lecture series was given at [ICTS](https://www.icts.res.in) Bengaluru in November 2025 as part of the [*Geometry, mechanics, and the physics of growth*](https://www.icts.res.in/program/Geomech) program, organised by [Joël Marthelot](https://biosoftact.wordpress.com), [S Ganga Prasath](https://sgangaprasath.github.io), and [Suraj Shankar](https://sites.lsa.umich.edu/shankar-lab/).
+
+### Lecture 1: The hydromechanical basis of plant growth
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PN68P6J97tI?si=E2J16Cez09kj8qcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Lecture 2: Growth and hydromechanics of plant tissues
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YIMfotLzMas?si=gPe6WjXGM7bfE4WL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Lecture 3: Growth and form of plant shoots
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9Bdw0zbL0pw?si=dBEMbz4qoKld24NC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

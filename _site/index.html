@@ -104,8 +104,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./collaborators.html"> 
-<span class="menu-text">Collaborators</span></a>
+    <a class="nav-link" href="./people.html"> 
+<span class="menu-text">People</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./outreach.html"> 
+<span class="menu-text">Outreach</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./cv.html"> 
@@ -165,17 +169,26 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/profile.jpeg" alt="Hadrien Oliveri" style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; float: left; margin-right: 1.5rem; margin-bottom: 1rem;"></p>
 <p>I am an applied mathematician working at the interface of nonlinear mechanics, elasticity, growth, and biological morphogenesis.</p>
 <p>My research develops mathematical models for how biological and soft material systems grow, deform, and control their shape.</p>
+<p>I am now a permanent <a href="https://www.cnrs.fr/en">CNRS</a> Research fellow (<em>Chargé de recherche</em>) at the <a href="https://iusti.cnrs.fr/?doing_wp_cron=1780647092.3494300842285156250000"><em>Institut Universitaire des Systèmes Thermiques Industriels</em></a> (<a href="https://iusti.cnrs.fr/research/11948-2/"><em>SOFT</em></a> group) in Marseille, France.</p>
 </section>
 <section id="research-topics" class="level2">
 <h2 class="anchored" data-anchor-id="research-topics">Research topics</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Plant mechanics and morphogenesis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Neuronal growth</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Network models of brain degeneration</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Nonlinear elasticity and instabilities</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Plant morphogenesis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Active rods</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Neuronal growth</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Biological transport and networks</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>I study the mechanics of plant shoots, with a focus on tissue tension, residual stress, growth, tropisms, and posture control.</p>
+<p>I develop theoretical and computational models to understand how plants grow and change shape. The focus is on the physical processes that underlie morphogenesis: water uptake, turgor pressure, cell-wall expansion, tissue mechanics, and growth regulation. Rather than prescribing growth patterns phenomenologically, I aim to derive growth laws from the mechanics of cells and tissues. A central question is how local cell-scale processes give rise to organ-scale shapes. For example, growing regions can draw water from their surroundings, creating hydraulic competition between neighbouring regions. Mechanical stresses and residual tensions can also influence how tissues expand, bend, or resist deformation. My work combines continuum mechanics, tissue hydraulics, thermodynamics, and numerical simulations to build models that can be compared with experiments on growing plant organs. The goal is to develop a mechanical theory of plant growth that connects cell-wall behaviour, water transport, and tissue-level form.</p>
+<div class="center">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/poromorpho.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption>Caption</figcaption>
+</figure>
+</div>
+</div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>I develop mathematical models for how local growth, remodeling, and mechanical feedback generate organ-scale shape changes in biological systems.</p>
+<p>I develop mathematical models for slender biological structures such as plant shoots, roots, tendrils, flagella, and other filament-like organs. These systems can often be described as rods: one-dimensional curves with mechanical properties, whose length, curvature, and stiffness evolve through growth or internal regulation. Broadly, this project seeks to build a multiscale theory of active rods: slender living structures whose shape is controlled by mechanical, hydraulic, geometric, and biochemical processes acting across scales.</p>
 <div class="center">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -184,12 +197,24 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </div>
+<p>A main focus is plant posture control. Shoots and roots bend because growth is not uniform across their cross-section, but this process is usually modelled using prescribed curvature laws or simplified growth profiles. My goal is to derive these rod-level laws from the underlying mechanics of the tissue. In particular, I study how residual stresses arise during growth, how they are distributed between outer and inner tissues, and how their local relaxation or modulation can generate bending. This work combines continuum mechanics, asymptotic dimensional reduction, and growth laws based on stress, pressure, and cell-wall rheology. Starting from three-dimensional tissue mechanics, the aim is to obtain effective rod models with emergent curvature, stiffness, and internal stress profiles. These models can then be used to study tropisms, proprioception, root navigation in heterogeneous environments, and the mechanics of secondary growth and wood formation.</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>I study transport, spreading, and clearance processes in biological networks, with applications to neurodegenerative disease models.</p>
+<p>I have worked on the mechanics of neuronal axon growth and guidance. Axons are long cellular projections that connect neurons during development, and their growth is influenced not only by chemical cues but also by the mechanical properties of their environment.</p>
+<p>With <a href="http://goriely.com">Alain Goriely</a> and <a href="https://mpzpm.mpg.de/research/kristian-franze">Kristian Franze</a>, I developed a morphoelastic rod model for nerve guidance by tissue stiffness. In this model, bundles of axons migrate through a mechanically heterogeneous substrate, with their growth direction affected by local stiffness. The theory predicts an analogy between axon guidance and geometrical optics: when axons cross a boundary between regions of different stiffness, their trajectories are deflected according to a law formally equivalent to Snell’s law of refraction. We combined this model with atomic-force-microscopy measurements of the mechanical landscape of the Xenopus brain to test guidance predictions in realistic conditions.</p>
+<p>More recently, with Christoforos Kassianides and Alain Goriely, I extended this approach to a multiscale theory of axonal durotaxis. This model links molecular clutch dynamics in the growth cone, traction forces, and morphoelastic growth of the axon. It predicts that axons can show either positive or negative durotaxis depending on substrate stiffness, and identifies an optimal stiffness controlling axon steering.</p>
+<p>I also studied the rheology of axons with Alain Goriely, <a href="https://me.stanford.edu/people/ellen-kuhl">Ellen Kuhl</a> and <a href="https://livingmatter.stanford.edu/people/rijk-de-rooij">Rijk de Rooij</a>. In this work, we modelled the axonal cytoskeleton as a network of microtubules connected by tau proteins. The model shows how protein turnover gives rise to an effective viscoelastic response: under slow stretch, axons behave like a Maxwell material, while under fast stretch, cross-link remodelling cannot keep up, leading to mechanical failure and axonal damage. Together, this work uses mechanics to connect molecular processes, cytoskeletal structure, and whole-axon growth, with applications to neurodevelopment, mechanosensing, and injury.</p>
+<div class="center">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/axon.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Caption</figcaption>
+</figure>
+</div>
+</div>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<p>I work on nonlinear elastic phenomena including bifurcation, stability, and shape formation in soft solids and biological materials.</p>
+<p>I study transport, spreading, and clearance processes in biological networks, with applications to neurodegenerative disease models.</p>
 </div>
 </div>
 </div>

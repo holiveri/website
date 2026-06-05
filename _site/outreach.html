@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Publications – Hadrien Oliveri</title>
+<title>Outreach – Hadrien Oliveri</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./publications.html" aria-current="page"> 
+    <a class="nav-link" href="./publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
@@ -108,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./outreach.html"> 
+    <a class="nav-link active" href="./outreach.html" aria-current="page"> 
 <span class="menu-text">Outreach</span></a>
   </li>  
   <li class="nav-item">
@@ -130,20 +130,32 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#plants-with-teeth" id="toc-plants-with-teeth" class="nav-link active" data-scroll-target="#plants-with-teeth">Plants with teeth</a></li>
+  <li><a href="#the-mathematics-and-mechanics-of-plant-morphogenesis" id="toc-the-mathematics-and-mechanics-of-plant-morphogenesis" class="nav-link" data-scroll-target="#the-mathematics-and-mechanics-of-plant-morphogenesis">The mathematics and mechanics of plant morphogenesis</a>
+  <ul class="collapse">
+  <li><a href="#lecture-1-the-hydromechanical-basis-of-plant-growth" id="toc-lecture-1-the-hydromechanical-basis-of-plant-growth" class="nav-link" data-scroll-target="#lecture-1-the-hydromechanical-basis-of-plant-growth">Lecture 1: The hydromechanical basis of plant growth</a></li>
+  <li><a href="#lecture-2-growth-and-hydromechanics-of-plant-tissues" id="toc-lecture-2-growth-and-hydromechanics-of-plant-tissues" class="nav-link" data-scroll-target="#lecture-2-growth-and-hydromechanics-of-plant-tissues">Lecture 2: Growth and hydromechanics of plant tissues</a></li>
+  <li><a href="#lecture-3-growth-and-form-of-plant-shoots" id="toc-lecture-3-growth-and-form-of-plant-shoots" class="nav-link" data-scroll-target="#lecture-3-growth-and-form-of-plant-shoots">Lecture 3: Growth and form of plant shoots</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Publications</h1>
+<h1 class="title">Outreach</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -155,77 +167,33 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>A full and up-to-date list is available on my <a href="https://scholar.google.com/citations?user=t-GO214AAAAJ&amp;hl=fr">Google Scholar profile</a>.</p>
-<div id="pub-preprints">
-
-</div>
-<div id="pub-articles">
-
-</div>
-<div id="pub-proceedings">
-
-</div>
-<script src="papers.js"></script>
-<script>
-function paperLink(paper) {
-  if (paper.doi) {
-    return `DOI: <a href="https://doi.org/${paper.doi}"><code>${paper.doi}</code></a>`;
-  }
-
-  if (paper.arxiv) {
-    return `arXiv: <a href="https://arxiv.org/abs/${paper.arxiv}"><code>${paper.arxiv}</code></a>`;
-  }
-
-  return "";
-}
-
-function renderPublications(containerId, title, type) {
-  const container = document.getElementById(containerId);
-
-  const selected = papers
-    .filter(paper => paper.type === type)
-    .sort((a, b) => b.year - a.year);
-
-  if (selected.length === 0) return;
-
-  const section = document.createElement("section");
-  section.className = "publication-section";
-
-  const heading = document.createElement("h2");
-  heading.textContent = title;
-  section.appendChild(heading);
-
-  const list = document.createElement("ul");
-  list.className = "publication-list";
-
-  selected.forEach(paper => {
-    const item = document.createElement("li");
-    item.className = "publication-item";
-
-    const link = paperLink(paper);
-    const authors = paper.citationAuthors || paper.authors.join(", ");
-
-    item.innerHTML = `
-      <span class="publication-authors">${authors}</span>,<br>
-      <strong>${paper.title}</strong>,<br>
-      <em>${paper.venue}</em>, ${paper.year}.
-      ${link ? `<br>${link}` : ""}
-      ${paper.note ? `<br><span class="publication-note">${paper.note}</span>` : ""}
-    `;
-
-    list.appendChild(item);
-  });
-
-  section.appendChild(list);
-  container.appendChild(section);
-}
-
-renderPublications("pub-preprints", "Preprints", "preprint");
-renderPublications("pub-articles", "Journal articles", "article");
-renderPublications("pub-proceedings", "Conference proceedings", "proceeding");
-</script>
+<section id="plants-with-teeth" class="level2">
+<h2 class="anchored" data-anchor-id="plants-with-teeth">Plants with teeth</h2>
+<p>A summary of <a href="https://www.pnas.org/doi/10.1073/pnas.2306268120">our work</a> on carnivorous pitcher plants (<em>Nepenthes</em>), with <a href="https://www.biology.ox.ac.uk/people/chris-thorogood">Chris Thorogood</a>, <a href="https://people.maths.ox.ac.uk/moulton/">Derek Moulton</a> and <a href="http://goriely.com">Alain Goriely</a>. For details, see <a href="https://www.maths.ox.ac.uk/node/64967">here</a>.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gBIJwVOsPok?si=mOkmwmSaU-WPiXIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+<section id="the-mathematics-and-mechanics-of-plant-morphogenesis" class="level2">
+<h2 class="anchored" data-anchor-id="the-mathematics-and-mechanics-of-plant-morphogenesis">The mathematics and mechanics of plant morphogenesis</h2>
+<p>This lecture series was given at <a href="https://www.icts.res.in">ICTS</a> Bengaluru in November 2025 as part of the <a href="https://www.icts.res.in/program/Geomech"><em>Geometry, mechanics, and the physics of growth</em></a> program, organised by <a href="https://biosoftact.wordpress.com">Joël Marthelot</a>, <a href="https://sgangaprasath.github.io">S Ganga Prasath</a>, and <a href="https://sites.lsa.umich.edu/shankar-lab/">Suraj Shankar</a>.</p>
+<section id="lecture-1-the-hydromechanical-basis-of-plant-growth" class="level3">
+<h3 class="anchored" data-anchor-id="lecture-1-the-hydromechanical-basis-of-plant-growth">Lecture 1: The hydromechanical basis of plant growth</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PN68P6J97tI?si=E2J16Cez09kj8qcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+<section id="lecture-2-growth-and-hydromechanics-of-plant-tissues" class="level3">
+<h3 class="anchored" data-anchor-id="lecture-2-growth-and-hydromechanics-of-plant-tissues">Lecture 2: Growth and hydromechanics of plant tissues</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YIMfotLzMas?si=gPe6WjXGM7bfE4WL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+<section id="lecture-3-growth-and-form-of-plant-shoots" class="level3">
+<h3 class="anchored" data-anchor-id="lecture-3-growth-and-form-of-plant-shoots">Lecture 3: Growth and form of plant shoots</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9Bdw0zbL0pw?si=dBEMbz4qoKld24NC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

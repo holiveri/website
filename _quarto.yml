@@ -12,8 +12,10 @@ website:
         text: Research
       - href: publications.qmd
         text: Publications
-      - href: collaborators.qmd
-        text: Collaborators
+      - href: people.qmd
+        text: People
+      - href: outreach.qmd
+        text: Outreach
       - href: cv.qmd
         text: CV
       - href: contact.qmd

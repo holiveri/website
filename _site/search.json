@@ -116,7 +116,7 @@
     "href": "cv.html",
     "title": "Curriculum Vitæ",
     "section": "",
-    "text": "2024→present\nGroup Leader\nMax Planck Institute for Plant Breeding Research, Cologne, Germany\n2024→2024\nELBE Postdoctoral Fellow\nMax Planck Institute of Molecular Cell Biology and Genetics, Dresden, Germany\n2023→2024\nPostdoctoral Researcher\nMax Planck Institute of Molecular Cell Biology and Genetics, Dresden, Germany\n2019→2023\nPostdoctoral Researcher\nMathematical Institute, University of Oxford, Oxford, United Kingdom\n2015→2019\nPhD student\nInria, University of Montpellier, ENS de Lyon, Montpellier and Lyon, France"
+    "text": "2024→present\nResearch fellow (Chargé de recherche)\nCNRS, IUSTI (SOFT group), Marseille, France.\n2024→2026\nGroup Leader\nMax Planck Institute for Plant Breeding Research, Cologne, Germany\n2024→2024\nELBE Postdoctoral Fellow\nMax Planck Institute of Molecular Cell Biology and Genetics, Dresden, Germany\n2023→2024\nPostdoctoral Researcher\nMax Planck Institute of Molecular Cell Biology and Genetics, Dresden, Germany\n2019→2023\nPostdoctoral Researcher\nMathematical Institute, University of Oxford, Oxford, United Kingdom\n2015→2019\nPhD student\nInria, University of Montpellier, ENS de Lyon, Montpellier and Lyon, France"
   },
   {
     "objectID": "index.html#about",
@@ -144,7 +144,7 @@
     "href": "index.html#about-me",
     "title": "Hadrien Oliveri",
     "section": "About me",
-    "text": "About me\n\nI am an applied mathematician working at the interface of nonlinear mechanics, elasticity, growth, and biological morphogenesis.\nMy research develops mathematical models for how biological and soft material systems grow, deform, and control their shape."
+    "text": "About me\n\nI am an applied mathematician working at the interface of nonlinear mechanics, elasticity, growth, and biological morphogenesis.\nMy research develops mathematical models for how biological and soft material systems grow, deform, and control their shape.\nI am now a permanent CNRS Research fellow (Chargé de recherche) at the Institut Universitaire des Systèmes Thermiques Industriels (SOFT group) in Marseille, France."
   },
   {
     "objectID": "publications.html#journal-articles",
@@ -158,7 +158,7 @@
     "href": "cv.html#employment-history",
     "title": "Curriculum Vitæ",
     "section": "",
-    "text": "2024→present\nGroup Leader\nMax Planck Institute for Plant Breeding Research, Cologne, Germany\n2024→2024\nELBE Postdoctoral Fellow\nMax Planck Institute of Molecular Cell Biology and Genetics, Dresden, Germany\n2023→2024\nPostdoctoral Researcher\nMax Planck Institute of Molecular Cell Biology and Genetics, Dresden, Germany\n2019→2023\nPostdoctoral Researcher\nMathematical Institute, University of Oxford, Oxford, United Kingdom\n2015→2019\nPhD student\nInria, University of Montpellier, ENS de Lyon, Montpellier and Lyon, France"
+    "text": "2024→present\nResearch fellow (Chargé de recherche)\nCNRS, IUSTI (SOFT group), Marseille, France.\n2024→2026\nGroup Leader\nMax Planck Institute for Plant Breeding Research, Cologne, Germany\n2024→2024\nELBE Postdoctoral Fellow\nMax Planck Institute of Molecular Cell Biology and Genetics, Dresden, Germany\n2023→2024\nPostdoctoral Researcher\nMax Planck Institute of Molecular Cell Biology and Genetics, Dresden, Germany\n2019→2023\nPostdoctoral Researcher\nMathematical Institute, University of Oxford, Oxford, United Kingdom\n2015→2019\nPhD student\nInria, University of Montpellier, ENS de Lyon, Montpellier and Lyon, France"
   },
   {
     "objectID": "cv.html#download",
@@ -170,7 +170,7 @@
   {
     "objectID": "collaborators.html",
     "href": "collaborators.html",
-    "title": "Collaborators",
+    "title": "People",
     "section": "",
     "text": "A map of coauthorship connections. Nodes are colored by the main research area of the corresponding collaborations. Node sizes reflect the number of papers and the recency of the collaborations."
   },
@@ -214,7 +214,7 @@
     "href": "index.html#research-topics",
     "title": "Hadrien Oliveri",
     "section": "Research topics",
-    "text": "Research topics\n\nPlant mechanics and morphogenesisNeuronal growthNetwork models of brain degenerationNonlinear elasticity and instabilities\n\n\nI study the mechanics of plant shoots, with a focus on tissue tension, residual stress, growth, tropisms, and posture control.\n\n\nI develop mathematical models for how local growth, remodeling, and mechanical feedback generate organ-scale shape changes in biological systems.\n\n\n\n\nCaption\n\n\n\n\n\nI study transport, spreading, and clearance processes in biological networks, with applications to neurodegenerative disease models.\n\n\nI work on nonlinear elastic phenomena including bifurcation, stability, and shape formation in soft solids and biological materials."
+    "text": "Research topics\n\nPlant morphogenesisActive rodsNeuronal growthBiological transport and networks\n\n\nI develop theoretical and computational models to understand how plants grow and change shape. The focus is on the physical processes that underlie morphogenesis: water uptake, turgor pressure, cell-wall expansion, tissue mechanics, and growth regulation. Rather than prescribing growth patterns phenomenologically, I aim to derive growth laws from the mechanics of cells and tissues. A central question is how local cell-scale processes give rise to organ-scale shapes. For example, growing regions can draw water from their surroundings, creating hydraulic competition between neighbouring regions. Mechanical stresses and residual tensions can also influence how tissues expand, bend, or resist deformation. My work combines continuum mechanics, tissue hydraulics, thermodynamics, and numerical simulations to build models that can be compared with experiments on growing plant organs. The goal is to develop a mechanical theory of plant growth that connects cell-wall behaviour, water transport, and tissue-level form.\n\n\n\n\nCaption\n\n\n\n\n\nI develop mathematical models for slender biological structures such as plant shoots, roots, tendrils, flagella, and other filament-like organs. These systems can often be described as rods: one-dimensional curves with mechanical properties, whose length, curvature, and stiffness evolve through growth or internal regulation. Broadly, this project seeks to build a multiscale theory of active rods: slender living structures whose shape is controlled by mechanical, hydraulic, geometric, and biochemical processes acting across scales.\n\n\n\n\nCaption\n\n\n\nA main focus is plant posture control. Shoots and roots bend because growth is not uniform across their cross-section, but this process is usually modelled using prescribed curvature laws or simplified growth profiles. My goal is to derive these rod-level laws from the underlying mechanics of the tissue. In particular, I study how residual stresses arise during growth, how they are distributed between outer and inner tissues, and how their local relaxation or modulation can generate bending. This work combines continuum mechanics, asymptotic dimensional reduction, and growth laws based on stress, pressure, and cell-wall rheology. Starting from three-dimensional tissue mechanics, the aim is to obtain effective rod models with emergent curvature, stiffness, and internal stress profiles. These models can then be used to study tropisms, proprioception, root navigation in heterogeneous environments, and the mechanics of secondary growth and wood formation.\n\n\nI have worked on the mechanics of neuronal axon growth and guidance. Axons are long cellular projections that connect neurons during development, and their growth is influenced not only by chemical cues but also by the mechanical properties of their environment.\nWith Alain Goriely and Kristian Franze, I developed a morphoelastic rod model for nerve guidance by tissue stiffness. In this model, bundles of axons migrate through a mechanically heterogeneous substrate, with their growth direction affected by local stiffness. The theory predicts an analogy between axon guidance and geometrical optics: when axons cross a boundary between regions of different stiffness, their trajectories are deflected according to a law formally equivalent to Snell’s law of refraction. We combined this model with atomic-force-microscopy measurements of the mechanical landscape of the Xenopus brain to test guidance predictions in realistic conditions.\nMore recently, with Christoforos Kassianides and Alain Goriely, I extended this approach to a multiscale theory of axonal durotaxis. This model links molecular clutch dynamics in the growth cone, traction forces, and morphoelastic growth of the axon. It predicts that axons can show either positive or negative durotaxis depending on substrate stiffness, and identifies an optimal stiffness controlling axon steering.\nI also studied the rheology of axons with Alain Goriely, Ellen Kuhl and Rijk de Rooij. In this work, we modelled the axonal cytoskeleton as a network of microtubules connected by tau proteins. The model shows how protein turnover gives rise to an effective viscoelastic response: under slow stretch, axons behave like a Maxwell material, while under fast stretch, cross-link remodelling cannot keep up, leading to mechanical failure and axonal damage. Together, this work uses mechanics to connect molecular processes, cytoskeletal structure, and whole-axon growth, with applications to neurodevelopment, mechanosensing, and injury.\n\n\n\n\nCaption\n\n\n\n\n\nI study transport, spreading, and clearance processes in biological networks, with applications to neurodegenerative disease models."
   },
   {
     "objectID": "contact.html#location",
@@ -236,5 +236,82 @@
     "title": "Contact",
     "section": "Links",
     "text": "Links\nMPIPZ · Bluesky Social · Researchgate · ORCID · Linkedin · Google Scholar"
+  },
+  {
+    "objectID": "collaborators.html#collaborators",
+    "href": "collaborators.html#collaborators",
+    "title": "People",
+    "section": "",
+    "text": "A map of coauthorship connections. Nodes are colored by the main research area of the corresponding collaborations. Node sizes reflect the number of papers and the recency of the collaborations."
+  },
+  {
+    "objectID": "collaborators.html#people",
+    "href": "collaborators.html#people",
+    "title": "People",
+    "section": "People",
+    "text": "People"
+  },
+  {
+    "objectID": "collaborators.html#phd-students",
+    "href": "collaborators.html#phd-students",
+    "title": "People",
+    "section": "PhD students",
+    "text": "PhD students\n Nanda Krishna Prabhakaranpillai Ushakumari uses multiscale modelling to study the role of cell shape and organisation in determining the elastic properties of plant tissues."
+  },
+  {
+    "objectID": "people.html",
+    "href": "people.html",
+    "title": "People",
+    "section": "",
+    "text": "A map of coauthorship connections. Nodes are colored by the main research area of the corresponding collaborations. Node sizes reflect the number of papers and the recency of the collaborations."
+  },
+  {
+    "objectID": "people.html#collaborators",
+    "href": "people.html#collaborators",
+    "title": "People",
+    "section": "",
+    "text": "A map of coauthorship connections. Nodes are colored by the main research area of the corresponding collaborations. Node sizes reflect the number of papers and the recency of the collaborations."
+  },
+  {
+    "objectID": "people.html#phd-students",
+    "href": "people.html#phd-students",
+    "title": "People",
+    "section": "PhD students",
+    "text": "PhD students\n Nanda Krishna Prabhakaranpillai Ushakumari uses multiscale modelling to study the role of cell shape and organisation in determining the elastic properties of plant tissues."
+  },
+  {
+    "objectID": "outreach.html#the-mathematics-and-mechanics-of-plant-morphogenesis-lecture-series-at-icts-bengaluru",
+    "href": "outreach.html#the-mathematics-and-mechanics-of-plant-morphogenesis-lecture-series-at-icts-bengaluru",
+    "title": "Outreach",
+    "section": "The mathematics and mechanics of plant morphogenesis (Lecture series at ICTS Bengaluru)",
+    "text": "The mathematics and mechanics of plant morphogenesis (Lecture series at ICTS Bengaluru)\n\nLecture 1: The hydromechanical basis of plant growth\n\n\n\n\nLecture 2: Growth and hydromechanics of plant tissues\n\n\n\n\nLecture 3: Growth and form of plant shoots"
+  },
+  {
+    "objectID": "outreach.html#the-mathematics-and-mechanics-of-plant-morphogenesis-lecture-series-at-icts-bengaluru-november-2025",
+    "href": "outreach.html#the-mathematics-and-mechanics-of-plant-morphogenesis-lecture-series-at-icts-bengaluru-november-2025",
+    "title": "Outreach",
+    "section": "The mathematics and mechanics of plant morphogenesis (Lecture series at ICTS Bengaluru, November 2025)",
+    "text": "The mathematics and mechanics of plant morphogenesis (Lecture series at ICTS Bengaluru, November 2025)\n\nLecture 1: The hydromechanical basis of plant growth\n\n\n\n\nLecture 2: Growth and hydromechanics of plant tissues\n\n\n\n\nLecture 3: Growth and form of plant shoots"
+  },
+  {
+    "objectID": "outreach.html#the-mathematics-and-mechanics-of-plant-morphogenesis",
+    "href": "outreach.html#the-mathematics-and-mechanics-of-plant-morphogenesis",
+    "title": "Outreach",
+    "section": "The mathematics and mechanics of plant morphogenesis",
+    "text": "The mathematics and mechanics of plant morphogenesis\nThis lecture series was given at ICTS Bengaluru in November 2025 as part of the Geometry, mechanics, and the physics of growth program, organised by Joël Marthelot, S Ganga Prasath, and Suraj Shankar.\n\nLecture 1: The hydromechanical basis of plant growth\n\n\n\n\nLecture 2: Growth and hydromechanics of plant tissues\n\n\n\n\nLecture 3: Growth and form of plant shoots"
+  },
+  {
+    "objectID": "outreach.html",
+    "href": "outreach.html",
+    "title": "Outreach",
+    "section": "",
+    "text": "A summary of our work on carnivorous pitcher plants (Nepenthes), with Chris Thorogood, Derek Moulton and Alain Goriely. For details, see here."
+  },
+  {
+    "objectID": "outreach.html#plants-with-teeth",
+    "href": "outreach.html#plants-with-teeth",
+    "title": "Outreach",
+    "section": "",
+    "text": "A summary of our work on carnivorous pitcher plants (Nepenthes), with Chris Thorogood, Derek Moulton and Alain Goriely. For details, see here."
   }
 ]

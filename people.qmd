@@ -1,6 +1,8 @@
 ---
-title: "Collaborators"
+title: "People"
 ---
+
+## Collaborators
 
 A map of coauthorship connections. Nodes are colored by the main research area of the corresponding collaborations. Node sizes reflect the number of papers and the recency of the collaborations. 
 
@@ -474,3 +476,10 @@ function drag() {
     .on("end", dragended);
 }
 </script>
+
+## PhD students
+
+<img src="images/nanda.png"
+     alt="Nanda Krishna Prabhakaranpillai Ushakumari"
+     style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; float: left; margin-right: 1.5rem; margin-bottom: 1rem;">
+**Nanda Krishna Prabhakaranpillai Ushakumari** uses multiscale modelling to study the role of cell shape and organisation in determining the elastic properties of plant tissues.

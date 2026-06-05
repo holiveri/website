@@ -16,36 +16,63 @@ I am an applied mathematician working at the interface of nonlinear mechanics, e
 
 My research develops mathematical models for how biological and soft material systems grow, deform, and control their shape.
 
+I am now a permanent [CNRS](https://www.cnrs.fr/en) Research fellow (*Chargé de recherche*) at the [*Institut Universitaire des Systèmes Thermiques Industriels*](https://iusti.cnrs.fr/?doing_wp_cron=1780647092.3494300842285156250000) ([*SOFT*](https://iusti.cnrs.fr/research/11948-2/) group) in Marseille, France.
+
 :::
 
 ## Research topics
 
 ::: {.panel-tabset}
 
-### Plant mechanics and morphogenesis
+### Plant morphogenesis
 
-I study the mechanics of plant shoots, with a focus on tissue tension,
-residual stress, growth, tropisms, and posture control.
+I develop theoretical and computational models to understand how plants grow and change shape. The focus is on the physical processes that underlie morphogenesis: water uptake, turgor pressure, cell-wall expansion, tissue mechanics, and growth regulation. Rather than prescribing growth patterns phenomenologically, I aim to derive growth laws from the mechanics of cells and tissues.
+A central question is how local cell-scale processes give rise to organ-scale shapes. For example, growing regions can draw water from their surroundings, creating hydraulic competition between neighbouring regions. Mechanical stresses and residual tensions can also influence how tissues expand, bend, or resist deformation. My work combines continuum mechanics, tissue hydraulics, thermodynamics, and numerical simulations to build models that can be compared with experiments on growing plant organs.
+The goal is to develop a mechanical theory of plant growth that connects cell-wall behaviour, water transport, and tissue-level form.
 
-### Neuronal growth
+::: {.center}
+![Caption](images/poromorpho.png){width=60%}
+:::
 
-I develop mathematical models for how local growth, remodeling, and mechanical
-feedback generate organ-scale shape changes in biological systems.
+
+### Active rods
+
+I develop mathematical models for slender biological structures such as plant shoots, roots, tendrils, flagella, and other filament-like organs. These systems can often be described as rods: one-dimensional curves with mechanical properties, whose length, curvature, and stiffness evolve through growth or internal regulation. Broadly, this project seeks to build a multiscale theory of active rods: slender living structures whose shape is controlled by mechanical, hydraulic, geometric, and biochemical processes acting across scales.
+
+
 
 ::: {.center}
 ![Caption](images/rod.png){width=60%}
 :::
 
 
-### Network models of brain degeneration
+A main focus is plant posture control. Shoots and roots bend because growth is not uniform across their cross-section, but this process is usually modelled using prescribed curvature laws or simplified growth profiles. My goal is to derive these rod-level laws from the underlying mechanics of the tissue. In particular, I study how residual stresses arise during growth, how they are distributed between outer and inner tissues, and how their local relaxation or modulation can generate bending.
+This work combines continuum mechanics, asymptotic dimensional reduction, and growth laws based on stress, pressure, and cell-wall rheology. Starting from three-dimensional tissue mechanics, the aim is to obtain effective rod models with emergent curvature, stiffness, and internal stress profiles. These models can then be used to study tropisms, proprioception, root navigation in heterogeneous environments, and the mechanics of secondary growth and wood formation.  
+
+
+### Neuronal growth
+
+I have worked on the mechanics of neuronal axon growth and guidance. Axons are long cellular projections that connect neurons during development, and their growth is influenced not only by chemical cues but also by the mechanical properties of their environment.  
+
+With [Alain Goriely](http://goriely.com) and [Kristian Franze](https://mpzpm.mpg.de/research/kristian-franze), I developed a morphoelastic rod model for nerve guidance by tissue stiffness. In this model, bundles of axons migrate through a mechanically heterogeneous substrate, with their growth direction affected by local stiffness. The theory predicts an analogy between axon guidance and geometrical optics: when axons cross a boundary between regions of different stiffness, their trajectories are deflected according to a law formally equivalent to Snell’s law of refraction. We combined this model with atomic-force-microscopy measurements of the mechanical landscape of the Xenopus brain to test guidance predictions in realistic conditions.  
+
+More recently, with Christoforos Kassianides and Alain Goriely, I extended this approach to a multiscale theory of axonal durotaxis. This model links molecular clutch dynamics in the growth cone, traction forces, and morphoelastic growth of the axon. It predicts that axons can show either positive or negative durotaxis depending on substrate stiffness, and identifies an optimal stiffness controlling axon steering.  
+
+I also studied the rheology of axons with Alain Goriely, [Ellen Kuhl](https://me.stanford.edu/people/ellen-kuhl) and [Rijk de Rooij](https://livingmatter.stanford.edu/people/rijk-de-rooij). In this work, we modelled the axonal cytoskeleton as a network of microtubules connected by tau proteins. The model shows how protein turnover gives rise to an effective viscoelastic response: under slow stretch, axons behave like a Maxwell material, while under fast stretch, cross-link remodelling cannot keep up, leading to mechanical failure and axonal damage.
+Together, this work uses mechanics to connect molecular processes, cytoskeletal structure, and whole-axon growth, with applications to neurodevelopment, mechanosensing, and injury.
+
+
+::: {.center}
+![Caption](images/axon.png){width=90%}
+:::
+
+
+
+
+### Biological transport and networks
 
 I study transport, spreading, and clearance processes in biological networks,
 with applications to neurodegenerative disease models.
-
-### Nonlinear elasticity and instabilities
-
-I work on nonlinear elastic phenomena including bifurcation, stability, and
-shape formation in soft solids and biological materials.
 
 :::
 

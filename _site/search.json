@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Hadrien Oliveri",
     "section": "",
-    "text": "I am an applied mathematician working at the interface of nonlinear mechanics, elasticity, growth, and biological morphogenesis.\nMy research develops mathematical models for how biological and soft material systems grow, deform, and control their shape."
+    "text": "Applied mathematician"
   },
   {
     "objectID": "index.html#research",
@@ -143,8 +143,8 @@
     "objectID": "index.html#about-me",
     "href": "index.html#about-me",
     "title": "Hadrien Oliveri",
-    "section": "",
-    "text": "I am an applied mathematician working at the interface of nonlinear mechanics, elasticity, growth, and biological morphogenesis.\nMy research develops mathematical models for how biological and soft material systems grow, deform, and control their shape."
+    "section": "About me",
+    "text": "About me\n\nI am an applied mathematician working at the interface of nonlinear mechanics, elasticity, growth, and biological morphogenesis.\nMy research develops mathematical models for how biological and soft material systems grow, deform, and control their shape."
   },
   {
     "objectID": "publications.html#journal-articles",
@@ -165,14 +165,14 @@
     "href": "cv.html#download",
     "title": "Curriculum Vitæ",
     "section": "Download",
-    "text": "Download\nYou can download my full CV here"
+    "text": "Download\nYou can download my full CV here."
   },
   {
     "objectID": "collaborators.html",
     "href": "collaborators.html",
     "title": "Collaborators",
     "section": "",
-    "text": "A map of selected collaborators and coauthorship connections. Nodes are colored by the main research area of the corresponding collaborations."
+    "text": "A map of coauthorship connections. Nodes are colored by the main research area of the corresponding collaborations. Node sizes reflect the number of papers and the recency of the collaborations."
   },
   {
     "objectID": "publications2.html",
@@ -201,5 +201,40 @@
     "title": "Publications",
     "section": "Conference proceedings",
     "text": "Conference proceedings\n\nM. Boudissa, M. Chabanas, G. Bahl, H. Oliveri, and J. Tonetti,\nVirtual pre-operative planning in acetabular surgery using a patient-specific biomechanical model: A prospective clinical study,\nCAOS 2020.\nM. Boudissa, H. Oliveri, M. Chabanas, P. Merloz, and J. Tonetti,\nPre-operative planning in acetabular surgery: The first patient-specific biomechanical model,\nInternational Society of Computer-Assisted Orthopaedic Surgery, 2017.\ndoi:10.1302/1358-992X.2017.20.018\nH. Oliveri, M. Boudissa, J. Tonetti, and M. Chabanas,\nPlanning acetabular fracture reduction using patient-specific multibody simulation of the hip,\nMedical Imaging 2017: Image-Guided Procedures, Robotic Interventions, and Modeling, SPIE, 2017.\ndoi:10.1117/12.2250380\nM. Boudissa, M. Chabanas, H. Oliveri, and J. Tonetti,\nVirtual fracture reduction of the acetabulum using a rigid body biomechanical model,\nSURGETICA, 2014.\n\n● As equally-contributing first author\n★ As corresponding author"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Email: holiveri [at] mpipz dot mpg dot de"
+  },
+  {
+    "objectID": "index.html#research-topics",
+    "href": "index.html#research-topics",
+    "title": "Hadrien Oliveri",
+    "section": "Research topics",
+    "text": "Research topics\n\nPlant mechanics and morphogenesisNeuronal growthNetwork models of brain degenerationNonlinear elasticity and instabilities\n\n\nI study the mechanics of plant shoots, with a focus on tissue tension, residual stress, growth, tropisms, and posture control.\n\n\nI develop mathematical models for how local growth, remodeling, and mechanical feedback generate organ-scale shape changes in biological systems.\n\n\n\n\nCaption\n\n\n\n\n\nI study transport, spreading, and clearance processes in biological networks, with applications to neurodegenerative disease models.\n\n\nI work on nonlinear elastic phenomena including bifurcation, stability, and shape formation in soft solids and biological materials."
+  },
+  {
+    "objectID": "contact.html#location",
+    "href": "contact.html#location",
+    "title": "Contact",
+    "section": "Location",
+    "text": "Location\nDr Hadrien Oliveri\nMax Planck Institute for Plant Breeding Research\nDepartment of Comparative Development and Genetics\nCarl-von-Linne-Weg 10\nD-50829 Cologne, Germany"
+  },
+  {
+    "objectID": "contact.html#email",
+    "href": "contact.html#email",
+    "title": "Contact",
+    "section": "",
+    "text": "Email: holiveri [at] mpipz dot mpg dot de"
+  },
+  {
+    "objectID": "contact.html#links",
+    "href": "contact.html#links",
+    "title": "Contact",
+    "section": "Links",
+    "text": "Links\nMPIPZ · Bluesky Social · Researchgate · ORCID · Linkedin · Google Scholar"
   }
 ]

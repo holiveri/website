@@ -26,4 +26,4 @@ title: "Curriculum Vitæ"
 
 ## Download
 
-You can download my full CV [here](files/CV.pdf){.button}
+You can download my full CV [here](files/CV.pdf){.button}.

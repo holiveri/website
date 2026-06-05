@@ -2,6 +2,8 @@
 title: "Hadrien Oliveri"
 ---
 
+*Applied mathematician*
+
 ::: {.intro}
 
 ## About me
@@ -16,12 +18,36 @@ My research develops mathematical models for how biological and soft material sy
 
 :::
 
-## Research interests
+## Research topics
 
-- Growth and morphogenesis
-- Plant mechanics and tissue tension
-- Nonlinear elasticity and instabilities
-- Biological transport and network models
+::: {.panel-tabset}
+
+### Plant mechanics and morphogenesis
+
+I study the mechanics of plant shoots, with a focus on tissue tension,
+residual stress, growth, tropisms, and posture control.
+
+### Neuronal growth
+
+I develop mathematical models for how local growth, remodeling, and mechanical
+feedback generate organ-scale shape changes in biological systems.
+
+::: {.center}
+![Caption](images/rod.png){width=60%}
+:::
+
+
+### Network models of brain degeneration
+
+I study transport, spreading, and clearance processes in biological networks,
+with applications to neurodegenerative disease models.
+
+### Nonlinear elasticity and instabilities
+
+I work on nonlinear elastic phenomena including bifurcation, stability, and
+shape formation in soft solids and biological materials.
+
+:::
 
 ## Selected publications
 
@@ -46,16 +72,3 @@ D. E. Moulton, H. Oliveri, and A. Goriely,
 *Proceedings of the National Academy of Sciences*, 2020
 
 [See all publications](publications.html)
-
-## Contact
-
-Email: `holiveri [at] mpipz dot mpg dot de`
-
-## Links
-
-[MPIPZ](https://www.mpipz.mpg.de/5630577/oliveri) ·
-[Bluesky Social](https://bsky.app/profile/hadrienoliveri.bsky.social) ·
-[Researchgate](https://www.researchgate.net/profile/Hadrien-Oliveri) · 
-[ORCID](https://orcid.org/0000-0002-5488-5567) ·
-[Linkedin](https://www.linkedin.com/in/hadrien-oliveri-829514aa/) ·
-[Google Scholar](https://scholar.google.com/citations?user=t-GO214AAAAJ&hl=en)

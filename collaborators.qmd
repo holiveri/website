@@ -2,7 +2,7 @@
 title: "Collaborators"
 ---
 
-A map of selected collaborators and coauthorship connections. Nodes are colored by the main research area of the corresponding collaborations.
+A map of coauthorship connections. Nodes are colored by the main research area of the corresponding collaborations. Node sizes reflect the number of papers and the recency of the collaborations. 
 
 <div id="legend"></div>
 <div id="collab-network"></div>
@@ -12,39 +12,39 @@ A map of selected collaborators and coauthorship connections. Nodes are colored 
 
 <script>
 const width = 1150;
-const height = 780;
+const height = 1000;
 
 const mainAuthor = "H. Oliveri";
 
 const topicInfo = {
   plants: {
     label: "Plant mechanics and morphogenesis",
-    color: "#4b8f5a"
+    color: "#009E73"   // bluish green
   },
   neuro: {
     label: "Neuronal growth and durotaxis",
-    color: "#7c6bb0"
+    color: "#CC79A7"   // reddish purple
   },
   transport: {
     label: "Biological transport and networks",
-    color: "#4c78a8"
+    color: "#0072B2"   // blue
   },
   mechanics: {
     label: "Nonlinear mechanics",
-    color: "#444444"
+    color: "#E69F00"   // orange
   },
   biomechanics: {
     label: "Biomechanics and surgery",
-    color: "#b07d3c"
+    color: "#D55E00"   // vermillion
   },
   mixed: {
     label: "Mixed collaborations",
-    color: "#999999"
+    color: "#999999"   // grey
   },
-  me: {
-    label: "H. Oliveri",
-    color: "#111111"
-  }
+   me: {
+     label: "Hadrien Oliveri",
+     color: "#000000"   // black
+   }
 };
 
 // --------------------------------------------------
@@ -73,13 +73,24 @@ function edgeKey(a, b) {
 }
 
 papers.forEach(paper => {
+  const currentYear = new Date().getFullYear();
+const tau = 3; // larger = older collaborations remain important longer
+
+papers.forEach(paper => {
+  const age = currentYear - paper.year;
+  const timeWeight = Math.exp(-age / tau);
+
   paper.authors.forEach(author => {
     const node = ensureNode(author);
 
+    // raw paper count
     node.papers += 1;
 
+    // time-weighted collaboration score
+    node.weightedPapers = (node.weightedPapers || 0) + timeWeight;
+
     if (paper.topic) {
-      node.topics[paper.topic] = (node.topics[paper.topic] || 0) + 1;
+      node.topics[paper.topic] = (node.topics[paper.topic] || 0) + timeWeight;
     }
   });
 
@@ -100,7 +111,30 @@ papers.forEach(paper => {
       }
 
       const edge = edgeMap.get(key);
-      edge.value += 1;
+      edge.value += .1 * timeWeight;
+      edge.papers.push(paper.title);
+    }
+  }
+});
+
+  // Connect every pair of coauthors on the same paper
+  for (let i = 0; i < paper.authors.length; i++) {
+    for (let j = i + 1; j < paper.authors.length; j++) {
+      const a = paper.authors[i];
+      const b = paper.authors[j];
+      const key = edgeKey(a, b);
+
+      if (!edgeMap.has(key)) {
+        edgeMap.set(key, {
+          source: a,
+          target: b,
+          value: 0,
+          papers: []
+        });
+      }
+
+      const edge = edgeMap.get(key);
+      edge.value += .05;
       edge.papers.push(paper.title);
     }
   }
@@ -124,7 +158,8 @@ nodes.forEach(node => {
   node.group = topics.length ? topics[0][0] : "mixed";
 
   // Logarithmic scaling to emphasize frequent collaborators
-  node.size = 25 * Math.log1p(.5 * node.papers);
+  node.size =  10 * Math.log1p(.15 * node.weightedPapers || 0);
+
 });
 
 // --------------------------------------------------
@@ -132,7 +167,7 @@ nodes.forEach(node => {
 // --------------------------------------------------
 
 const legendItems = Object.entries(topicInfo)
-  .filter(([key]) => key !== "mixed");
+  .filter(([key]) => key !== "mixed" && key !== "me");
 
 const legend = d3.select("#legend")
   .append("div")
@@ -160,6 +195,46 @@ const svg = d3.select("#collab-network")
   .attr("width", "100%")
   .attr("height", "auto");
 
+  const defs = svg.append("defs");
+
+// Soft shadow for nodes
+const nodeShadow = defs.append("filter")
+  .attr("id", "node-shadow")
+  .attr("x", "-50%")
+  .attr("y", "-50%")
+  .attr("width", "200%")
+  .attr("height", "200%");
+
+const specularBlur = defs.append("filter")
+  .attr("id", "specular-blur")
+  .attr("x", "-50%")
+  .attr("y", "-50%")
+  .attr("width", "200%")
+  .attr("height", "200%");
+
+specularBlur.append("feGaussianBlur")
+  .attr("stdDeviation", 2.2);
+
+nodeShadow.append("feDropShadow")
+  .attr("dx", 0)
+  .attr("dy", 1.2)
+  .attr("stdDeviation", 1.2)
+  .attr("flood-color", "#000000")
+  .attr("flood-opacity", 0.18);
+
+// Gentle edge gradient
+const edgeGradient = defs.append("linearGradient")
+  .attr("id", "edge-gradient")
+  .attr("gradientUnits", "userSpaceOnUse");
+
+edgeGradient.append("stop")
+  .attr("offset", "0%")
+  .attr("stop-color", "#d3d3d3");
+
+edgeGradient.append("stop")
+  .attr("offset", "100%")
+  .attr("stop-color", "#8d8d8d");
+
 // Explicit layer order
 const linkLayer = svg.append("g").attr("class", "links");
 const nodeLayer = svg.append("g").attr("class", "nodes");
@@ -173,9 +248,10 @@ const link = linkLayer
   .selectAll("line")
   .data(links)
   .join("line")
-  .attr("stroke", "#b7b7b7")
-  .attr("stroke-opacity", 0.38)
-  .attr("stroke-width", d => 0.6 + Math.sqrt(d.value));
+  .attr("stroke", "url(#edge-gradient)")
+  .attr("stroke-opacity", 0.5)
+  .attr("stroke-width", d => 0. + Math.sqrt(d.value))
+  .attr("stroke-linecap", "round");
 
 link.append("title")
   .text(d => {
@@ -190,15 +266,73 @@ link.append("title")
 // --------------------------------------------------
 
 const node = nodeLayer
-  .selectAll("circle")
+  .selectAll("g")
   .data(nodes)
-  .join("circle")
-  .attr("r", d => d.size)
-  .attr("fill", d => topicInfo[d.group]?.color || topicInfo.mixed.color)
-  .attr("stroke", "#111111")
-  .attr("stroke-width", d => d.id === mainAuthor ? 1.8 : 0.8)
-  .attr("opacity", d => d.id === mainAuthor ? 1 : 1)
+  .join("g")
+  .attr("filter", "url(#node-shadow)")
   .call(drag());
+
+const pie = d3.pie()
+  .value(d => d[1])
+  .sort(null);
+
+node.each(function(d) {
+  const g = d3.select(this);
+  const topics = Object.entries(d.topics);
+
+  // Main author stays solid
+  if (d.id === mainAuthor || topics.length === 0) {
+    g.append("circle")
+      .attr("r", d.size)
+      .attr("fill", topicInfo[d.group]?.color || topicInfo.mixed.color)
+      .attr("stroke", "#111111")
+      .attr("stroke-width", d.id === mainAuthor ? 1.8 : 0.9);
+
+    // subtle highlight
+    g.append("ellipse")
+    .attr("cx", -0.1 * d.size)
+    .attr("cy", -0.5 * d.size)
+    .attr("rx", 0.3 * d.size)
+    .attr("ry", 0.26 * d.size)
+    .attr("fill", "#ffffff")
+    .attr("filter", "url(#specular-blur)")
+    .attr("opacity", 0.16)
+    
+    .attr("transform", "rotate(-20)");
+
+    return;
+  }
+
+  const arc = d3.arc()
+    .innerRadius(0)
+    .outerRadius(d.size);
+
+  g.selectAll("path")
+    .data(pie(topics))
+    .join("path")
+    .attr("d", arc)
+    .attr("fill", slice => topicInfo[slice.data[0]]?.color || topicInfo.mixed.color)
+    .attr("stroke", "rgba(255,255,255,0.85)")
+    .attr("stroke-width", 0.7);
+
+  // outer border
+  g.append("circle")
+    .attr("r", d.size)
+    .attr("fill", "none")
+    .attr("stroke", "rgba(0,0,0,0.65)")
+    .attr("stroke-width", 0.9);
+
+  // subtle highlight / shine
+  g.append("ellipse")
+    .attr("cx", -0.1 * d.size)
+    .attr("cy", -0.5 * d.size)
+    .attr("rx", 0.3 * d.size)
+    .attr("ry", 0.26 * d.size)
+    .attr("fill", "#ffffff")
+    .attr("filter", "url(#specular-blur)")
+    .attr("opacity", 0.16)
+    .attr("transform", "rotate(-20)");
+});
 
 node.append("title")
   .text(d => {
@@ -234,16 +368,42 @@ labelLayer.raise();
 // --------------------------------------------------
 // Force simulation
 // --------------------------------------------------
+function boundaryForce(padding = 90, strength = 0.08) {
+  let nodes;
 
+  function force() {
+    for (const d of nodes) {
+      if (d.x < padding) {
+        d.vx += (padding - d.x) * strength;
+      }
+      if (d.x > width - padding) {
+        d.vx += (width - padding - d.x) * strength;
+      }
+      if (d.y < padding) {
+        d.vy += (padding - d.y) * strength;
+      }
+      if (d.y > height - padding) {
+        d.vy += (height - padding - d.y) * strength;
+      }
+    }
+  }
+
+  force.initialize = function(_) {
+    nodes = _;
+  };
+
+  return force;
+}
 const simulation = d3.forceSimulation(nodes)
   .force("link", d3.forceLink(links)
     .id(d => d.id)
     .distance(d => 95 + 8 * d.value)
     .strength(0.18)
   )
-  .force("charge", d3.forceManyBody().strength(-780))
+  .force("charge", d3.forceManyBody().strength(-750))
   .force("center", d3.forceCenter(width / 2, height / 2))
-  .force("collision", d3.forceCollide().radius(d => d.size + 45))
+  .force("collision", d3.forceCollide().radius(d => d.size + 28))
+  .force("boundary", boundaryForce(130, 0.08))
   .force("x", d3.forceX(d => {
     if (d.group === "plants") return width * 0.28;
     if (d.group === "neuro") return width * 0.72;
@@ -253,19 +413,25 @@ const simulation = d3.forceSimulation(nodes)
     return width * 0.50;
   }).strength(0.035))
   .force("y", d3.forceY(d => {
-    if (d.group === "plants") return height * 0.32;
-    if (d.group === "neuro") return height * 0.34;
-    if (d.group === "transport") return height * 0.68;
-    if (d.group === "biomechanics") return height * 0.72;
-    if (d.group === "mechanics") return height * 0.48;
-    return height * 0.50;
-  }).strength(0.035));
+  if (d.group === "plants") return height * 0.34;
+  if (d.group === "neuro") return height * 0.36;
+  if (d.group === "transport") return height * 0.67;
+  if (d.group === "biomechanics") return height * 0.70;
+  if (d.group === "mechanics") return height * 0.50;
+  return height * 0.52;
+}).strength(0.035))
 
 // --------------------------------------------------
 // Tick update: straight edges
 // --------------------------------------------------
-
 simulation.on("tick", () => {
+  const padding = 100;
+
+  nodes.forEach(d => {
+    d.x = Math.max(padding, Math.min(width - padding, d.x));
+    d.y = Math.max(padding, Math.min(height - padding, d.y));
+  });
+
   link
     .attr("x1", d => d.source.x)
     .attr("y1", d => d.source.y)
@@ -273,8 +439,7 @@ simulation.on("tick", () => {
     .attr("y2", d => d.target.y);
 
   node
-    .attr("cx", d => d.x)
-    .attr("cy", d => d.y);
+  .attr("transform", d => `translate(${d.x},${d.y})`);
 
   label
     .attr("x", d => d.x)

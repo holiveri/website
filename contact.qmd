@@ -1,0 +1,28 @@
+---
+title: "Contact"
+---
+
+## Email
+
+Email: `holiveri [at] mpipz dot mpg dot de`
+
+## Links
+
+[MPIPZ](https://www.mpipz.mpg.de/5630577/oliveri) ·
+[Bluesky Social](https://bsky.app/profile/hadrienoliveri.bsky.social) ·
+[Researchgate](https://www.researchgate.net/profile/Hadrien-Oliveri) · 
+[ORCID](https://orcid.org/0000-0002-5488-5567) ·
+[Linkedin](https://www.linkedin.com/in/hadrien-oliveri-829514aa/) ·
+[Google Scholar](https://scholar.google.com/citations?user=t-GO214AAAAJ&hl=en)
+
+## Location
+
+**Dr Hadrien Oliveri**  
+Max Planck Institute for Plant Breeding Research  
+Department of Comparative Development and Genetics  
+Carl-von-Linne-Weg 10  
+D-50829 Cologne, Germany
+
+<div class="map-inset">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2512.9449769277594!2d6.859362543961121!3d50.95879790957015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smax%20planck%20institute%20for%20plant%20breeding%20research%20carl-von-linne-weg%20lindenthal!5e0!3m2!1sen!2sde!4v1780645146657!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>

@@ -2,6 +2,14 @@
 title: "People"
 ---
 
+
+## PhD students
+
+<img src="images/nanda.png"
+     alt="Nanda Krishna Prabhakaranpillai Ushakumari"
+     style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; float: left; margin-right: 1.5rem; margin-bottom: 1rem;">
+**Nanda Krishna Prabhakaranpillai Ushakumari** uses multiscale modelling to study the role of cell shape and organisation in determining the elastic properties of plant tissues.
+
 ## Collaborators
 
 A map of coauthorship connections. Nodes are colored by the main research area of the corresponding collaborations. Node sizes reflect the number of papers and the recency of the collaborations. 
@@ -271,7 +279,7 @@ const node = nodeLayer
   .selectAll("g")
   .data(nodes)
   .join("g")
-  .attr("filter", "url(#node-shadow)")
+  // .attr("filter", "url(#node-shadow)")
   .call(drag());
 
 const pie = d3.pie()
@@ -338,11 +346,11 @@ node.each(function(d) {
 
 node.append("title")
   .text(d => {
-    const topicText = Object.entries(d.topics)
-      .map(([topic, count]) => `${topicInfo[topic]?.label || topic}: ${count}`)
-      .join("\n");
+    const exactCount = papers.reduce((count, paper) => {
+      return count + (paper.authors.includes(d.id) ? 1 : 0);
+    }, 0);
 
-    return `${d.id}\n${d.papers} paper(s)\n${topicText}`;
+    return `${d.id}\n${exactCount} paper(s)`;
   });
 
 // --------------------------------------------------
@@ -360,6 +368,26 @@ const label = labelLayer
   .attr("fill", "#111111")
   .attr("text-anchor", "middle")
   .attr("dy", d => d.size + 15)
+  .style("pointer-events", "none");
+
+ const countLabel = labelLayer
+  .selectAll("text.paper-count")
+  .data(nodes)
+  .join("text")
+  .attr("class", "paper-count")
+  .text(d => {
+    const exactCount = papers.reduce((count, paper) => {
+      return count + (paper.authors.includes(d.id) ? 1 : 0);
+    }, 0);
+
+    return exactCount >= 2 ? exactCount : "";
+  })
+  .attr("font-size", d => d.id === mainAuthor ? 12 : 10)
+  .attr("font-family", "Arial, sans-serif")
+  .attr("font-weight", 700)
+  .attr("fill", d => d.id === mainAuthor ? "#ffffff" : "#111111")
+  .attr("text-anchor", "middle")
+  .attr("dominant-baseline", "middle")
   .style("pointer-events", "none");
 
 // Force layer order explicitly
@@ -427,13 +455,6 @@ const simulation = d3.forceSimulation(nodes)
 // Tick update: straight edges
 // --------------------------------------------------
 simulation.on("tick", () => {
-  const padding = 100;
-
-  nodes.forEach(d => {
-    d.x = Math.max(padding, Math.min(width - padding, d.x));
-    d.y = Math.max(padding, Math.min(height - padding, d.y));
-  });
-
   link
     .attr("x1", d => d.source.x)
     .attr("y1", d => d.source.y)
@@ -441,12 +462,17 @@ simulation.on("tick", () => {
     .attr("y2", d => d.target.y);
 
   node
-  .attr("transform", d => `translate(${d.x},${d.y})`);
+    .attr("transform", d => `translate(${d.x},${d.y})`);
 
   label
     .attr("x", d => d.x)
     .attr("y", d => d.y);
+
+  countLabel
+    .attr("x", d => d.x)
+    .attr("y", d => d.y);
 });
+
 
 // --------------------------------------------------
 // Drag behavior
@@ -476,10 +502,3 @@ function drag() {
     .on("end", dragended);
 }
 </script>
-
-## PhD students
-
-<img src="images/nanda.png"
-     alt="Nanda Krishna Prabhakaranpillai Ushakumari"
-     style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%; float: left; margin-right: 1.5rem; margin-bottom: 1rem;">
-**Nanda Krishna Prabhakaranpillai Ushakumari** uses multiscale modelling to study the role of cell shape and organisation in determining the elastic properties of plant tissues.

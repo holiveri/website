@@ -4,11 +4,15 @@ title: "Curriculum Vitæ"
 
 ## Employment history
 
-- **2024→present**  
+<!-- - **2026→present**  
 *Research fellow* (*Chargé de recherche*)  
 [CNRS](https://www.cnrs.fr/en), [IUSTI](https://iusti.cnrs.fr/?doing_wp_cron=1780647092.3494300842285156250000) ([*SOFT*](https://iusti.cnrs.fr/research/11948-2/) group), Marseille, France.
 
 - **2024→2026**  
+*Group Leader*  
+[Max Planck Institute for Plant Breeding Research](https://www.mpipz.mpg.de/en), Cologne, Germany-->
+
+- **2024→present**  
 *Group Leader*  
 [Max Planck Institute for Plant Breeding Research](https://www.mpipz.mpg.de/en), Cologne, Germany
 
@@ -18,15 +22,15 @@ title: "Curriculum Vitæ"
 
 - **2023→2024**    
 *Postdoctoral Researcher*  
-[Max Planck Institute of Molecular Cell Biology and Genetics](https://www.mpi-cbg.de), Dresden, Germany
+[Max Planck Institute of Molecular Cell Biology and Genetics](https://www.mpi-cbg.de), Dresden, Germany  
 
 - **2019→2023**  
 *Postdoctoral Researcher*  
-[Mathematical Institute](https://www.maths.ox.ac.uk), [University of Oxford](https://www.ox.ac.uk), Oxford, United Kingdom
+[Mathematical Institute](https://www.maths.ox.ac.uk), [University of Oxford](https://www.ox.ac.uk), Oxford, United Kingdom  
 
 - **2015→2019**  
 *PhD student*  
-[Inria](https://www.inria.fr/en), [University of Montpellier](https://www.umontpellier.fr/en/), [ENS de Lyon](https://www.ens-lyon.fr/en/), Montpellier and Lyon, France
+[Inria](https://www.inria.fr/en), [University of Montpellier](https://www.umontpellier.fr/en/), [ENS de Lyon](https://www.ens-lyon.fr/en/), Montpellier and Lyon, France 
 
 ## Download
 

@@ -1,19 +1,5 @@
 const papers = [
-
-  // {
-  //   type: "preprint",
-  //   year: 2025,
-  //   topic: "plants",
-  //   authors: [
-  //     "N. K. Prabhakaranpillai Ushakumari",
-  //     "H. Oliveri"
-  //   ],
-  //   citationAuthors: "H. Oliveri, Y. Forterre, and J. Marthelot",
-  //   title: " ",
-  //   venue: "arxiv",
-  //   doi: "10.1101/2025.06.03.657596"
-  // },
-  
+ 
   {
     type: "preprint",
     year: 2025,

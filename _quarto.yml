@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "Hadrien Oliveri"
@@ -10,12 +11,12 @@ website:
         text: Home
       - href: research.qmd
         text: Research
+      - href: outreach.qmd
+        text: Outreach
       - href: publications.qmd
         text: Publications
       - href: people.qmd
         text: People
-      - href: outreach.qmd
-        text: Outreach
       - href: cv.qmd
         text: CV
       - href: contact.qmd

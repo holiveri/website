@@ -56,6 +56,13 @@
     "text": "About me\n\nI am an applied mathematician working at the interface of nonlinear mechanics, elasticity, growth, and biological morphogenesis.\nMy research develops mathematical models for how biological and soft material systems grow, deform, and control their shape.\n\nI am currently a Group Leader at the Max Planck Institute for Plant Breeding Research, Cologne, Germany."
   },
   {
+    "objectID": "index.html#news",
+    "href": "index.html#news",
+    "title": "Hadrien Oliveri",
+    "section": "News",
+    "text": "News\n\n‹\n\n\n\nApril 2026 · New paper in Journal of Mathematical Biology: A multiscale theory for network advection- reaction-diffusion.\n\n\n\n\n\n\n\n\nSeptember 2023 · Our work on carnivorous pitcher plants makes the cover of PNAS\n\n\n\n\n›"
+  },
+  {
     "objectID": "research.html",
     "href": "research.html",
     "title": "Research",
@@ -173,33 +180,5 @@
     "title": "Outreach",
     "section": "Plants with teeth",
     "text": "Plants with teeth\nA summary of our work on carnivorous pitcher plants (Nepenthes), with Chris Thorogood, Derek Moulton and Alain Goriely. For more, see here, or the podcast Modeling illuminates pitcher plant evolution."
-  },
-  {
-    "objectID": "index.html#highlights",
-    "href": "index.html#highlights",
-    "title": "Hadrien Oliveri",
-    "section": "Highlights",
-    "text": "Highlights\n\n\n\n\n\nCover of PNAS (Sept. 2023 | vol. 120 | no. 38)\n\n\nHighlights\n\n‹\n\n\nJune 2026 · New website online.\n\n\n2026 · New paper accepted in Journal of Mathematical Biology.\n\n\n2025 · Preprint available: Chirality and handedness.\n\n\n2025 · New collaborator network added.\n\n\n›"
-  },
-  {
-    "objectID": "index.html#better-quarto-native-version",
-    "href": "index.html#better-quarto-native-version",
-    "title": "Hadrien Oliveri",
-    "section": "Better Quarto-native version",
-    "text": "Better Quarto-native version\n```markdown ::: {.news-carousel}\n‹\n\n\nNews · New paper accepted in Journal of Mathematical Biology.\n\n\n\n\nNews · New paper accepted in PNAS.\n\n\n›"
-  },
-  {
-    "objectID": "index.html#highlights-1",
-    "href": "index.html#highlights-1",
-    "title": "Hadrien Oliveri",
-    "section": "Highlights",
-    "text": "Highlights\n\n‹\n\n\nJune 2026 · New website online.\n\n\n2026 · New paper accepted in Journal of Mathematical Biology.\n\n\n2025 · Preprint available: Chirality and handedness.\n\n\n2025 · New collaborator network added.\n\n\n›"
-  },
-  {
-    "objectID": "index.html#news",
-    "href": "index.html#news",
-    "title": "Hadrien Oliveri",
-    "section": "News",
-    "text": "News\n\n‹\n\n\n\nApril 2026 · New paper in Journal of Mathematical Biology: A multiscale theory for network advection- reaction-diffusion.\n\n\n\n\n\n\n\n\nSeptember 2023 · Our work on carnivorous pitcher plants makes the cover of PNAS\n\n\n\n\n›"
   }
 ]

@@ -29,24 +29,30 @@ I am currently a Group Leader at the [Max Planck Institute for Plant Breeding Re
 [‹]{#news-prev .news-button}
 
 ::: {.news-window}
+::: {.news-track}
 
+::: {.news-item}
+**April 2026** · New paper in *Journal of Mathematical Biology*: [*A multiscale theory for network advection- reaction-diffusion*](https://link.springer.com/article/10.1007/s00285-026-02386-2).
+:::
+ 
 ::: {.news-item .active}
+
+:::: {.columns}
+
+::: {.column width="30%"}
 ::: {.center}
-[![Our work on carnivorous pitcher plants makes the cover of PNAS](images/pnas.2023.120.issue-38.cover.webp){width="30%"}](https://www.pnas.org/doi/10.1073/pnas.2306268120)
+[![](images/pnas.2023.120.issue-38.cover.webp){width="050%"}](https://www.pnas.org/toc/pnas/120/38)
 :::
 :::
 
-::: {.news-item}
-**2026** · New paper accepted in *Journal of Mathematical Biology*.
+::: {.column width="70%"}
+**September 2023** · Our work on carnivorous pitcher plants makes the cover of PNAS
 :::
 
-::: {.news-item}
-**2025** · Preprint available: *Chirality and handedness*.
+::::
+
 :::
 
-::: {.news-item}
-**2025** · New collaborator network added.
-:::
 
 :::
 
@@ -56,25 +62,27 @@ I am currently a Group Leader at the [Max Planck Institute for Plant Breeding Re
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  const track = document.querySelector(".news-track");
   const items = document.querySelectorAll(".news-item");
   const previous = document.getElementById("news-prev");
   const next = document.getElementById("news-next");
 
-  if (!items.length || !previous || !next) return;
+  if (!track || !items.length || !previous || !next) return;
 
   let current = 0;
 
   function showNews(index) {
-    items[current].classList.remove("active");
     current = (index + items.length) % items.length;
-    items[current].classList.add("active");
+    track.style.transform = `translateX(-${current * 100}%)`;
   }
 
-  previous.addEventListener("click", function () {
+  previous.addEventListener("click", function (event) {
+    event.preventDefault();
     showNews(current - 1);
   });
 
-  next.addEventListener("click", function () {
+  next.addEventListener("click", function (event) {
+    event.preventDefault();
     showNews(current + 1);
   });
 });

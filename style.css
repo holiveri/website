@@ -230,3 +230,54 @@ a:hover {
   width: 100%;
   height: 100%;
 }
+
+.v-center {
+  align-items: center;
+}
+
+.v-top {
+  align-items: flex-start;
+}
+
+.v-top h3 {
+  margin-top: 0;
+}
+
+.news-carousel {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1.5rem 0 2rem 0;
+  padding: 0.75rem 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.news-window {
+  flex: 1;
+  min-height: 1.8rem;
+}
+
+.news-item {
+  display: none;
+  font-size: 0.95rem;
+  color: #333333;
+}
+
+.news-item.active {
+  display: block;
+}
+
+.news-button {
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #555555;
+  text-decoration: none;
+  border-bottom: none;
+  user-select: none;
+}
+
+.news-button:hover {
+  color: #000000;
+  border-bottom: none;
+}

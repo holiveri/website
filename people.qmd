@@ -12,7 +12,7 @@ title: "People"
 
 ## Collaborators
 
-A map of coauthorship connections. Nodes are colored by the main research area of the corresponding collaborations. Node sizes reflect the number of papers and the recency of the collaborations. 
+A map of coauthorship connections. Nodes are coloured by the main research area of the corresponding collaborations. Node sizes reflect the number of papers and the recency of the collaborations. 
 
 <div id="legend"></div>
 <div id="collab-network"></div>

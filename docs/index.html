@@ -131,17 +131,11 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#about-me" id="toc-about-me" class="nav-link active" data-scroll-target="#about-me">About me</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -150,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -163,19 +157,116 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><em>Applied mathematician</em></p>
-<section id="about-me" class="level2 intro">
+<div class="intro">
+<section id="about-me" class="level2">
 <h2 class="anchored" data-anchor-id="about-me">About me</h2>
 <p><img src="images/profile.jpeg" alt="Hadrien Oliveri" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; float: left; margin-right: 1.5rem; margin-bottom: 1rem;"></p>
 <p>I am an applied mathematician working at the interface of nonlinear mechanics, elasticity, growth, and biological morphogenesis.</p>
 <p>My research develops mathematical models for how biological and soft material systems grow, deform, and control their shape.</p>
 <!-- I am now a permanent [CNRS](https://www.cnrs.fr/en) Research fellow (*Chargé de recherche*) at the [*Institut Universitaire des Systèmes Thermiques Industriels*](https://iusti.cnrs.fr/?doing_wp_cron=1780647092.3494300842285156250000) ([*SOFT*](https://iusti.cnrs.fr/research/11948-2/) group) in Marseille, France.
  -->
-<p>I am now a Group Leader at the <a href="https://www.mpipz.mpg.de/en">Max Planck Institute for Plant Breeding Research</a>, Cologne, Germany.</p>
+<p>I am currently a Group Leader at the <a href="https://www.mpipz.mpg.de/en">Max Planck Institute for Plant Breeding Research</a>, Cologne, Germany.</p>
 </section>
+<section id="news" class="level2">
+<h2 class="anchored" data-anchor-id="news">News</h2>
+<div class="news-carousel">
+<p><span id="news-prev" class="news-button">‹</span></p>
+<div class="news-window">
+<div class="news-item active">
+<div class="center">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.pnas.org/doi/10.1073/pnas.2306268120"><img src="images/pnas.2023.120.issue-38.cover.webp" class="img-fluid figure-img" style="width:30.0%"></a></p>
+<figcaption>Our work on carnivorous pitcher plants makes the cover of PNAS</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="news-item">
+<p><strong>2026</strong> · New paper accepted in <em>Journal of Mathematical Biology</em>.</p>
+</div>
+<div class="news-item">
+<p><strong>2025</strong> · Preprint available: <em>Chirality and handedness</em>.</p>
+</div>
+<div class="news-item">
+<p><strong>2025</strong> · New collaborator network added.</p>
+</div>
+</div>
+<p><span id="news-next" class="news-button">›</span></p>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".news-item");
+  const previous = document.getElementById("news-prev");
+  const next = document.getElementById("news-next");
+
+  if (!items.length || !previous || !next) return;
+
+  let current = 0;
+
+  function showNews(index) {
+    items[current].classList.remove("active");
+    current = (index + items.length) % items.length;
+    items[current].classList.add("active");
+  }
+
+  previous.addEventListener("click", function () {
+    showNews(current - 1);
+  });
+
+  next.addEventListener("click", function () {
+    showNews(current + 1);
+  });
+});
+</script>
 
 
+</section>
+</div>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("manual-news");
+  if (!container) return;
+
+  const news = [
+    "<strong>News</strong> · New paper accepted in <em>Journal of Mathematical Biology</em>.",
+    "<strong>News</strong> · Preprint available: <em>Chirality and handedness</em>.",
+    "<strong>Talk</strong> · Upcoming seminar on mathematical mechanics of morphogenesis.",
+    "<strong>Update</strong> · Website updated with publications and collaborator network."
+  ];
+
+  let current = 0;
+
+  container.innerHTML = `
+    <div class="news-carousel">
+      <button type="button" class="news-button" id="news-prev">‹</button>
+      <div class="news-window">
+        <div class="news-item active">${news[current]}</div>
+      </div>
+      <button type="button" class="news-button" id="news-next">›</button>
+    </div>
+  `;
+
+  const item = container.querySelector(".news-item");
+  const previous = container.querySelector("#news-prev");
+  const next = container.querySelector("#news-next");
+
+  function showNews(index) {
+    current = (index + news.length) % news.length;
+    item.innerHTML = news[current];
+  }
+
+  previous.addEventListener("click", function () {
+    showNews(current - 1);
+  });
+
+  next.addEventListener("click", function () {
+    showNews(current + 1);
+  });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

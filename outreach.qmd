@@ -18,6 +18,6 @@ This lecture series was given at [ICTS](https://www.icts.res.in) Bengaluru in No
 
 ## Plants with teeth
 
-A summary of [our work](https://www.pnas.org/doi/10.1073/pnas.2306268120) on carnivorous pitcher plants (*Nepenthes*), with [Chris Thorogood](https://www.biology.ox.ac.uk/people/chris-thorogood), [Derek Moulton](https://people.maths.ox.ac.uk/moulton/) and [Alain Goriely](http://goriely.com). For details, see [here](https://www.maths.ox.ac.uk/node/64967).
+A summary of [our work](https://www.pnas.org/doi/10.1073/pnas.2306268120) on carnivorous pitcher plants (*Nepenthes*), with [Chris Thorogood](https://www.biology.ox.ac.uk/people/chris-thorogood), [Derek Moulton](https://people.maths.ox.ac.uk/moulton/) and [Alain Goriely](http://goriely.com). For more, see [here](https://www.maths.ox.ac.uk/node/64967), or the podcast [*Modeling illuminates pitcher plant evolution*](https://www.pnas.org/post/podcast/modeling-illuminates-pitcher-plant-evolution).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gBIJwVOsPok?si=mOkmwmSaU-WPiXIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

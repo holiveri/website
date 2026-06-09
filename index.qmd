@@ -21,6 +21,61 @@ My research develops mathematical models for how biological and soft material sy
 
 I am currently a Group Leader at the [Max Planck Institute for Plant Breeding Research](https://www.mpipz.mpg.de/en), Cologne, Germany.
 
+
+## News
+
+::: {.news-carousel}
+
+[‹]{#news-prev .news-button}
+
+::: {.news-window}
+
+::: {.news-item .active}
+::: {.center}
+[![Our work on carnivorous pitcher plants makes the cover of PNAS](images/pnas.2023.120.issue-38.cover.webp){width="30%"}](https://www.pnas.org/doi/10.1073/pnas.2306268120)
+:::
 :::
 
+::: {.news-item}
+**2026** · New paper accepted in *Journal of Mathematical Biology*.
+:::
 
+::: {.news-item}
+**2025** · Preprint available: *Chirality and handedness*.
+:::
+
+::: {.news-item}
+**2025** · New collaborator network added.
+:::
+
+:::
+
+[›]{#news-next .news-button}
+
+:::
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".news-item");
+  const previous = document.getElementById("news-prev");
+  const next = document.getElementById("news-next");
+
+  if (!items.length || !previous || !next) return;
+
+  let current = 0;
+
+  function showNews(index) {
+    items[current].classList.remove("active");
+    current = (index + items.length) % items.length;
+    items[current].classList.add("active");
+  }
+
+  previous.addEventListener("click", function () {
+    showNews(current - 1);
+  });
+
+  next.addEventListener("click", function () {
+    showNews(current + 1);
+  });
+});
+</script>

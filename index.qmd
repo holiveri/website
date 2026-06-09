@@ -31,29 +31,29 @@ I am currently a Group Leader at the [Max Planck Institute for Plant Breeding Re
 ::: {.news-window}
 ::: {.news-track}
 
-::: {.news-item}
-**April 2026** · New paper in *Journal of Mathematical Biology*: [*A multiscale theory for network advection- reaction-diffusion*](https://link.springer.com/article/10.1007/s00285-026-02386-2).
+::: {.news-item .active}
+**April 2026** · New paper in *Journal of Mathematical Biology*: [*A multiscale theory for network advection-reaction-diffusion*](https://link.springer.com/article/10.1007/s00285-026-02386-2).
 :::
  
-::: {.news-item .active}
+::: {.news-item}
 
 :::: {.columns}
 
 ::: {.column width="30%"}
 ::: {.center}
-[![](images/pnas.2023.120.issue-38.cover.webp){width="050%"}](https://www.pnas.org/toc/pnas/120/38)
+[![](images/pnas.2023.120.issue-38.cover.webp){width="50%"}](https://www.pnas.org/toc/pnas/120/38)
 :::
 :::
 
 ::: {.column width="70%"}
-**September 2023** · Our work on carnivorous pitcher plants makes the cover of PNAS
+**September 2023** · Our work on carnivorous pitcher plants makes the cover of PNAS.
 :::
 
 ::::
 
 :::
 
-
+:::
 :::
 
 [›]{#news-next .news-button}

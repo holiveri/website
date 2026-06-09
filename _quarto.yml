@@ -29,4 +29,3 @@ format:
     css: style.css
     toc: true
     page-layout: full
-    include-in-header: favicon.html

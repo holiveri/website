@@ -38,10 +38,10 @@ I am currently a Group Leader at the [Max Planck Institute for Plant Breeding Re
 ::: {.news-item}
 
 :::: {.columns}
-
 ::: {.column width="30%"}
 ::: {.center}
 [![](images/pnas.2023.120.issue-38.cover.webp){width="50%"}](https://www.pnas.org/toc/pnas/120/38)
+:::
 :::
 :::
 

@@ -61,7 +61,7 @@ with applications to neurodegenerative disease models.
 
 ## Selected publications
 
-**[Towards a hydromechanical theory of plant active matter](https://hal.science/hal-05623240v1)**   
+**[Towards a hydromechanical theory of plant active matter](https://doi.org/10.1017/qpb.2026.10048)**   
 H. Oliveri, C. Godin, and I. Cheddadi  
 *Quantitative Plant Biology*, accepted, 2026
 

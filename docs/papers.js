@@ -32,22 +32,7 @@ const papers = [
     ],
     citationAuthors: "H. Oliveri, T. Lessinnes, D. E. Moulton, and A. Goriely",
     title: "Chirality and handedness",
-    venue: "Under review, commissioned by Reviews of Modern Physics"
-  },
-
-  {
-    type: "article",
-    year: 2026,
-    topic: "transport",
-    authors: [
-      "H. Oliveri",
-      "E. Cozzolino",
-      "A. Goriely"
-    ],
-    citationAuthors: "H. Oliveri, E. Cozzolino, and A. Goriely",
-    title: "A multiscale theory for network advection-reaction-diffusion",
-    venue: "Journal of Mathematical Biology, 92, 65",
-    doi: "10.1007/s00285-026-02386-2"
+    venue: "Under review"
   },
 
   {
@@ -62,7 +47,23 @@ const papers = [
     citationAuthors: "H. Oliveri, C. Godin, and I. Cheddadi",
     title: "Towards an active matter theory of plant morphogenesis",
     venue: "Quantitative Plant Biology, accepted",
-    arxiv: "2512.05554"
+    doi: "10.1017/qpb.2026.10048"
+  },
+
+  {
+    type: "article",
+    year: 2026,
+    topic: "transport",
+    authors: [
+      "H. Oliveri",
+      "E. Cozzolino",
+      "A. Goriely"
+    ],
+    citationAuthors: "H. Oliveri*, E. Cozzolino, and A. Goriely",
+    title: "A multiscale theory for network advection-reaction-diffusion",
+    venue: "Journal of Mathematical Biology, 92, 65",
+    doi: "10.1007/s00285-026-02386-2",
+    note: "* As corresponding author."
   },
 
   {
@@ -91,10 +92,11 @@ const papers = [
       "A. Goriely",
       "H. Oliveri"
     ],
-    citationAuthors: "C. Kassianides, A. Goriely, and H. Oliveri",
+    citationAuthors: "C. Kassianides, A. Goriely, and H. Oliveri*",
     title: "The multiscale mechanics of axon durotaxis",
     venue: "Journal of the Mechanics and Physics of Solids, 200, 106134",
-    doi: "10.1016/j.jmps.2025.106134"
+    doi: "10.1016/j.jmps.2025.106134",
+    note: "* As corresponding author."
   },
 
   {
@@ -105,16 +107,17 @@ const papers = [
       "H. Oliveri",
       "I. Cheddadi"
     ],
-    citationAuthors: "H. Oliveri and I. Cheddadi",
+    citationAuthors: "H. Oliveri* and I. Cheddadi",
     title: "Hydromechanical field theory of plant morphogenesis",
     venue: "Journal of the Mechanics and Physics of Solids, 196, 106035",
-    doi: "10.1016/j.jmps.2025.106035"
+    doi: "10.1016/j.jmps.2025.106035",
+    note: "* As corresponding author."
   },
 
   {
     type: "article",
     year: 2024,
-    topic: "mechanics",
+    topic: "biomechanics",
     authors: [
       "D. E.  Moulton",
       "H. Oliveri"

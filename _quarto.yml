@@ -29,5 +29,4 @@ format:
     css: style.css
     toc: true
     page-layout: full
-
-include-after-body: news.html
+    include-in-header: favicon.html

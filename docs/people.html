@@ -70,6 +70,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link rel="icon" type="image/png" href="images/favicon.png?v=3">
+<link rel="shortcut icon" type="image/png" href="images/favicon.png?v=3">
 
 
 <link rel="stylesheet" href="style.css">
@@ -665,48 +667,6 @@ function drag() {
 </section>
 
 </main> <!-- /main -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const container = document.getElementById("manual-news");
-  if (!container) return;
-
-  const news = [
-    "<strong>News</strong> · New paper accepted in <em>Journal of Mathematical Biology</em>.",
-    "<strong>News</strong> · Preprint available: <em>Chirality and handedness</em>.",
-    "<strong>Talk</strong> · Upcoming seminar on mathematical mechanics of morphogenesis.",
-    "<strong>Update</strong> · Website updated with publications and collaborator network."
-  ];
-
-  let current = 0;
-
-  container.innerHTML = `
-    <div class="news-carousel">
-      <button type="button" class="news-button" id="news-prev">‹</button>
-      <div class="news-window">
-        <div class="news-item active">${news[current]}</div>
-      </div>
-      <button type="button" class="news-button" id="news-next">›</button>
-    </div>
-  `;
-
-  const item = container.querySelector(".news-item");
-  const previous = container.querySelector("#news-prev");
-  const next = container.querySelector("#news-next");
-
-  function showNews(index) {
-    current = (index + news.length) % news.length;
-    item.innerHTML = news[current];
-  }
-
-  previous.addEventListener("click", function () {
-    showNews(current - 1);
-  });
-
-  next.addEventListener("click", function () {
-    showNews(current + 1);
-  });
-});
-</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

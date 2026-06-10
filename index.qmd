@@ -30,12 +30,17 @@ I am currently a Group Leader at the [Max Planck Institute for Plant Breeding Re
 
 ::: {.news-window}
 ::: {.news-track}
+ 
+::: {.news-item .active}
+**June 2026** · New paper in *Quantitative Plant Biology*: [*Towards a hydromechanical theory of plant active matter*](https://www.cambridge.org/core/journals/quantitative-plant-biology/article/towards-a-hydromechanical-theory-of-plant-active-matter/50D8AB246D02C0B6FAAE3D81FF9762EA).
+:::
+
 
 ::: {.news-item .active}
 **April 2026** · New paper in *Journal of Mathematical Biology*: [*A multiscale theory for network advection-reaction-diffusion*](https://link.springer.com/article/10.1007/s00285-026-02386-2).
 :::
  
-::: {.news-item}
+::: {.news-item .active}
 
 :::: {.columns}
 ::: {.column width="30%"}
@@ -45,7 +50,7 @@ I am currently a Group Leader at the [Max Planck Institute for Plant Breeding Re
 :::
 
 ::: {.column width="70%"}
-**September 2023** · Carnivorous pitcher plants make the cover of PNAS.
+**September 2023** · Carnivorous pitcher plants on the cover of PNAS.
 :::
 
 ::::

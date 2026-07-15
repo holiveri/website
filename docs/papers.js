@@ -1,5 +1,5 @@
 const papers = [
- 
+
   {
     type: "preprint",
     year: 2025,

@@ -10,7 +10,7 @@ title: "Hadrien Oliveri"
 
 <img src="images/profile.jpeg"
      alt="Hadrien Oliveri"
-     style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; float: left; margin-right: 1.5rem; margin-bottom: 1rem;">
+     style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; float: left; margin-right: 3rem; margin-bottom: 1rem;">
 
 I am an applied mathematician working at the interface of nonlinear mechanics, elasticity, growth, and biological morphogenesis.
 
@@ -34,7 +34,6 @@ I am currently a Group Leader at the [Max Planck Institute for Plant Breeding Re
 ::: {.news-item .active}
 **June 2026** · New paper in *Quantitative Plant Biology*: [*Towards a hydromechanical theory of plant active matter*](https://www.cambridge.org/core/journals/quantitative-plant-biology/article/towards-a-hydromechanical-theory-of-plant-active-matter/50D8AB246D02C0B6FAAE3D81FF9762EA).
 :::
-
 
 ::: {.news-item .active}
 **April 2026** · New paper in *Journal of Mathematical Biology*: [*A multiscale theory for network advection-reaction-diffusion*](https://link.springer.com/article/10.1007/s00285-026-02386-2).

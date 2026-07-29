@@ -1,6 +1,21 @@
 const papers = [
 
   {
+    type: "article",
+    year: 2025,
+    topic: "plants",
+    authors: [
+      "H. Oliveri",
+      "I. Cheddadi"
+    ],
+    citationAuthors: "H. Oliveri* and I. Cheddadi",
+    title: "Correction to Hydromechanical field theory of plant morphogenesis",
+    venue: "Journal of the Mechanics and Physics of Solids, 106781",
+    doi: "10.1016/j.jmps.2025.106035",
+    note: "* As corresponding author."
+  },
+
+  {
     type: "preprint",
     year: 2025,
     topic: "transport",

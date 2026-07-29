@@ -2,7 +2,7 @@ const papers = [
 
   {
     type: "article",
-    year: 2025,
+    year: 2026,
     topic: "plants",
     authors: [
       "H. Oliveri",

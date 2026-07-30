@@ -9,7 +9,7 @@ const papers = [
       "I. Cheddadi"
     ],
     citationAuthors: "H. Oliveri* and I. Cheddadi",
-    title: "Correction to Hydromechanical field theory of plant morphogenesis",
+    title: "Corrigendum to Hydromechanical field theory of plant morphogenesis [J. Mech. Phys. Solids 196 (2025) 10603]",
     venue: "Journal of the Mechanics and Physics of Solids, 106781",
     doi: "10.1016/j.jmps.2025.106035",
     note: "* As corresponding author."

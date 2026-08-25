@@ -4,17 +4,17 @@ title: "Curriculum Vitæ"
 
 ## Employment history
 
-<!-- - **2026→present**  
-*Research fellow* (*Chargé de recherche*)  
-[CNRS](https://www.cnrs.fr/en), [IUSTI](https://iusti.cnrs.fr/?doing_wp_cron=1780647092.3494300842285156250000) ([*SOFT*](https://iusti.cnrs.fr/research/11948-2/) group), Marseille, France.
+- **2026**  
+*Research Scientist (Chargé de Recherche)*  
+[CNRS](https://www.cnrs.fr/en), [IUSTI](https://iusti.cnrs.fr/?doing_wp_cron=1780647092.3494300842285156250000) ([*SOFT*](https://iusti.cnrs.fr/research/11948-2/) group), Marseille, France. Permanent national research appointment (position starting Dec 2026).
 
 - **2024→2026**  
 *Group Leader*  
-[Max Planck Institute for Plant Breeding Research](https://www.mpipz.mpg.de/en), Cologne, Germany-->
+[Max Planck Institute for Plant Breeding Research](https://www.mpipz.mpg.de/en), [Department of Comparative Development and Genetics](https://www.mpipz.mpg.de/226344/tsiantis-dpt), Cologne, Germany (ongoing)
 
-- **2024→present**  
+<!--- **2024→present**  
 *Group Leader*  
-[Max Planck Institute for Plant Breeding Research](https://www.mpipz.mpg.de/en), Cologne, Germany
+[Max Planck Institute for Plant Breeding Research](https://www.mpipz.mpg.de/en), Cologne, Germany-->
 
 - **2024→2024**  
 *ELBE Postdoctoral Fellow*  

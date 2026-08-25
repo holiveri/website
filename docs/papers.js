@@ -11,7 +11,7 @@ const papers = [
     citationAuthors: "H. Oliveri* and I. Cheddadi",
     title: "Corrigendum to Hydromechanical field theory of plant morphogenesis [J. Mech. Phys. Solids 196 (2025) 10603]",
     venue: "Journal of the Mechanics and Physics of Solids, 106781",
-    doi: "10.1016/j.jmps.2025.106035",
+    doi: "10.1016/j.jmps.2026.106781",
     note: "* As corresponding author."
   },
 
@@ -36,8 +36,8 @@ const papers = [
   },
 
   {
-    type: "preprint",
-    year: 2025,
+    type: "article",
+    year: 2026,
     topic: "mechanics",
     authors: [
       "H. Oliveri",
@@ -46,8 +46,10 @@ const papers = [
       "A. Goriely"
     ],
     citationAuthors: "H. Oliveri, T. Lessinnes, D. E. Moulton, and A. Goriely",
-    title: "Chirality and handedness",
-    venue: "Under review"
+    title: "Chirality and handedness of bodies and fields",
+    venue: "Reviews of Modern Physics",
+    note: "Accepted",
+    doi: "10.1103/vwnt-54zf"
   },
 
   {
@@ -61,7 +63,8 @@ const papers = [
     ],
     citationAuthors: "H. Oliveri, C. Godin, and I. Cheddadi",
     title: "Towards an active matter theory of plant morphogenesis",
-    venue: "Quantitative Plant Biology, accepted",
+    venue: "Quantitative Plant Biology",
+    note: "Accepted",
     doi: "10.1017/qpb.2026.10048"
   },
 
@@ -107,11 +110,10 @@ const papers = [
       "A. Goriely",
       "H. Oliveri"
     ],
-    citationAuthors: "C. Kassianides, A. Goriely, and H. Oliveri*",
+    citationAuthors: "C. Kassianides, A. Goriely, and H. Oliveri",
     title: "The multiscale mechanics of axon durotaxis",
     venue: "Journal of the Mechanics and Physics of Solids, 200, 106134",
-    doi: "10.1016/j.jmps.2025.106134",
-    note: "* As corresponding author."
+    doi: "10.1016/j.jmps.2025.106134"
   },
 
   {

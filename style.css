@@ -335,8 +335,9 @@ a:hover {
 }
 
 .photo-masonry {
-  column-count: 4;
-  column-gap: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
   margin-top: 2rem;
 }
 

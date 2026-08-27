@@ -318,3 +318,107 @@ a:hover {
   color: #000000;
   border-bottom: none;
 }
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.photo-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.photo-masonry {
+  column-count: 4;
+  column-gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.photo-tile {
+  break-inside: avoid;
+  margin: 0 0 0.75rem 0;
+}
+
+.photo-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+}
+
+.photo-button img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.photo-button img:hover {
+  transform: scale(1.01);
+  opacity: 0.94;
+}
+
+body:has(.photo-masonry) main {
+  max-width: 1200px;
+}
+
+.photo-lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 9999;
+  padding: 2rem;
+}
+
+.photo-lightbox.is-open {
+  display: flex;
+}
+
+.photo-lightbox img {
+  max-width: 95vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.4rem;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .photo-masonry {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 750px) {
+  .photo-masonry {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 450px) {
+  .photo-masonry {
+    column-count: 1;
+  }
+}

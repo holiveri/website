@@ -1,0 +1,78 @@
+---
+title: "Gallery"
+---
+
+A selection of photographs.
+
+```{python}
+#| echo: false
+#| output: asis
+
+from pathlib import Path
+
+gallery_dir = Path("gallery")
+extensions = {".jpg", ".jpeg", ".JPEG", ".png", ".webp", ".gif"}
+
+photos = sorted(
+    p for p in gallery_dir.iterdir()
+    if p.suffix.lower() in extensions
+)
+
+print('<div class="photo-masonry">')
+
+for photo in photos:
+    path = photo.as_posix()
+    print(f'''
+<figure class="photo-tile">
+  <button class="photo-button" type="button" data-full="{path}">
+    <img src="{path}" alt="">
+  </button>
+</figure>
+''')
+
+print('</div>')
+
+print('''
+<div id="photo-lightbox" class="photo-lightbox" aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="Close photo">×</button>
+  <img id="lightbox-image" src="" alt="">
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const lightbox = document.getElementById("photo-lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+  const closeButton = document.querySelector(".lightbox-close");
+  const photoButtons = document.querySelectorAll(".photo-button");
+
+  photoButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      lightboxImage.src = button.dataset.full;
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImage.src = "";
+  }
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", event => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+      closeLightbox();
+    }
+  });
+});
+</script>
+''')
+```

@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - gallery/
 
 website:
   title: "Hadrien Oliveri"
@@ -22,6 +24,8 @@ website:
         text: CV
       - href: contact.qmd
         text: Contact
+      - href: gallery.qmd
+        text: Gallery
 
 format:
   html:

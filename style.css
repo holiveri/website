@@ -334,43 +334,51 @@ a:hover {
   display: block;
 }
 
-.photo-masonry {
+body:has(.photo-grid) main {
+  max-width: 1200px;
+}
+
+.photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 0.75rem;
+  gap: 0.6rem;
   margin-top: 2rem;
 }
 
 .photo-tile {
-  break-inside: avoid;
-  margin: 0 0 0.75rem 0;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
 }
 
 .photo-button {
   display: block;
   width: 100%;
+  aspect-ratio: 1 / 1;
   padding: 0;
+  margin: 0;
   border: none;
-  background: none;
+  background: transparent;
   cursor: zoom-in;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .photo-button img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-.photo-button img:hover {
-  transform: scale(1.01);
+.photo-button:hover img {
+  transform: scale(1.03);
   opacity: 0.94;
 }
 
-body:has(.photo-masonry) main {
-  max-width: 1200px;
-}
+/* Popup lightbox */
 
 .photo-lightbox {
   position: fixed;
@@ -379,7 +387,7 @@ body:has(.photo-masonry) main {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.88);
-  z-index: 9999;
+  z-index: 999999;
   padding: 2rem;
 }
 
@@ -388,10 +396,12 @@ body:has(.photo-masonry) main {
 }
 
 .photo-lightbox img {
-  max-width: 95vw;
-  max-height: 90vh;
+  max-width: 92vw;
+  max-height: 88vh;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 14px;
 }
 
 .lightbox-close {
@@ -399,27 +409,30 @@ body:has(.photo-masonry) main {
   top: 1rem;
   right: 1.4rem;
   border: none;
-  background: none;
+  background: transparent;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   line-height: 1;
   cursor: pointer;
+  z-index: 1000000;
 }
 
-@media (max-width: 1100px) {
-  .photo-masonry {
-    column-count: 3;
+.no-scroll {
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .photo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 0.45rem;
   }
-}
 
-@media (max-width: 750px) {
-  .photo-masonry {
-    column-count: 2;
+  .photo-lightbox {
+    padding: 1rem;
   }
-}
 
-@media (max-width: 450px) {
-  .photo-masonry {
-    column-count: 1;
+  .photo-lightbox img {
+    max-width: 96vw;
+    max-height: 84vh;
   }
 }

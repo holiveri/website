@@ -18,7 +18,7 @@ photos = sorted(
     if p.suffix.lower() in extensions
 )
 
-print('<div class="photo-masonry">')
+print('<div class="photo-grid">')
 
 for photo in photos:
     path = photo.as_posix()
@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       lightboxImage.src = button.dataset.full;
       lightbox.classList.add("is-open");
       lightbox.setAttribute("aria-hidden", "false");
+      document.body.classList.add("no-scroll");
     });
   });
 
@@ -57,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     lightbox.classList.remove("is-open");
     lightbox.setAttribute("aria-hidden", "true");
     lightboxImage.src = "";
+    document.body.classList.remove("no-scroll");
   }
 
   closeButton.addEventListener("click", closeLightbox);
